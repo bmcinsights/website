@@ -59,16 +59,16 @@ export default function News() {
 
   return (
     <div className="">
-      <section className="container mx-auto my-12 sm:my-24 bg-black text-white px-4 sm:px-8">
+      <section className="container h-screen mx-auto my-16 md:my-16 bg-black text-white px-4 sm:px-8">
         <div className="text-center">
           <h1 className="font-bold text-5xl sm:text-6xl mb-6 text-primary">Threads</h1>
         </div>
 
         <div className="space-y-12">
           <div className="col-span-full flex justify-center sm:justify-start mb-6">
-            <Link href="news/create">
+            <Link href="threads/create">
               <Button variant="outline" className="border-2 border-gray-500 text-gray-500 bg-transparent hover:bg-gray-800 hover:text-white transition-all ease-in-out duration-300">
-                <Upload className="mr-2" /> Create News
+                <Upload className="mr-2" /> Create Thread
               </Button>
             </Link>
           </div>

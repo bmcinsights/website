@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Blog() {
   return (
-    <section className="container mx-auto my-12 sm:my-24 px-4">
+    <section className="container h-screen mx-auto my-12 px-4">
       <div className="mb-8">
-        <h1 className="font-montserrat text-4xl sm:text-6xl my-4 font-bold text-primary">
-          BLOGS
+        <h1 className="font-montserrat text-center text-4xl sm:text-6xl my-4 font-bold text-primary">
+          Blogs
         </h1>
       </div>
 

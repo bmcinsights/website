@@ -7,7 +7,7 @@ const AboutPage = () => {
                 <div className="space-y-12">
                     {/* Header Section */}
                     <div className="text-center">
-                        <h1 className="text-4xl md:text-5xl font-bold text-blue-400 mb-4">
+                        <h1 className="text-4xl md:text-6xl font-bold text-primary mb-4">
                             The BMC Insights
                         </h1>
                         <p className="text-xl text-gray-300 max-w-3xl mx-auto">

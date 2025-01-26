@@ -106,21 +106,21 @@ const ImageUpload = () => {
           <form>
             <div className="grid gap-12">
               <div className="flex flex-col">
-                <Label className="text-lg font-semibold">News Title:</Label>
+                <Label className="text-lg font-semibold">Thread Title:</Label>
                 <Input
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  placeholder="Enter News Title"
+                  placeholder="Enter Thread Title"
                   className="!bg-transparent border-2 rounded-md p-4 my-4 text-white font-semibold text-lg !border-gray-600" 
                 />
               </div>
 
               <div className="flex flex-col">
-                <Label className="text-lg font-semibold">News Body:</Label>
+                <Label className="text-lg font-semibold">Thread Body:</Label>
                 <textarea
                   value={text}
                   onChange={(e) => setText(e.target.value)}
-                  placeholder="Enter News Body"
+                  placeholder="Enter Thread Body"
                   rows={8}
                   className="bg-inherit border-2 rounded-md p-4 my-4 resize-none text-lg text-white font-medium border-gray-600"
                 />
