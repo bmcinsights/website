@@ -84,14 +84,14 @@ const Navbar = () => {
             Blogs
           </a>
           <a
-            href="#"
+            href="about"
             className={`block font-medium text-gray-300 hover:text-white py-2 px-4 md:py-0 text-lg transition duration-300 ${
               pathname === "/testimonials"
                 ? "underline decoration-sky-500 decoration-solid decoration-[3px]"
                 : ""
             }`}
           >
-            Testimonials
+            About 
           </a>
           {/* Login Button */}
           <a
