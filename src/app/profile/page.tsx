@@ -24,10 +24,9 @@ export default function ProfilePage() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-col overflow-x-hidden mt-4 ">
+    <div className="flex flex-col md:flex-col overflow-x-hidden">
       {/* Main Content */}
-      <div className="flex-1 px-4 md:p-10 overflow-y-auto">
-
+      <div className="flex-1 px-4 md:p-10 overflow-y-auto mt-2 md:mt-0 mb-2 md:mb-0">
         <HeroHighlight>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -53,9 +52,9 @@ export default function ProfilePage() {
           <h1 className="text-3xl md:ml-8 font-bold mb-4 underline decoration-sky-300">
             Explore
           </h1>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-svh md:mx-8 ">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-svh md:mx-8 mb-4 ">
             <WobbleCard
-              containerClassName="col-span-1 lg:col-span-2 h-full bg-fuchsia-950 min-h-[500px] lg:min-h-[300px]"
+              containerClassName="col-span-1 lg:col-span-2 h-full bg-fuchsia-950 min-h-[350px] sm:min-h-[400px] lg:min-h-[300px]"
               className=""
             >
               <a href="/threads" className="relative block w-full h-full">
@@ -68,13 +67,7 @@ export default function ProfilePage() {
                     from other students.
                   </p>
                 </div>
-                <Image
-                  src="/images/blogs.png"
-                  width={500}
-                  height={500}
-                  alt="news image"
-                  className="absolute right-0 lg:right-0 bottom-0 w-[80%] max-w-[300px] object-contain rounded-2xl"
-                />
+
               </a>
             </WobbleCard>
 
@@ -92,55 +85,22 @@ export default function ProfilePage() {
               </a>
             </WobbleCard>
 
-            <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-sky-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
-              <a href="/upcoming" className="relative block w-full h-full">
+                        <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-sky-900 min-h-[400px] lg:min-h-[500px] xl:min-h-[250px]">
+              <a href="/calendar" className="relative block w-full h-full">
                 <div className="max-w-sm" data-aos="fade-down">
                   <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-                    Events
+                    Calendar
                   </h2>
                   <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
-                    Find out about the latest events happening at our school.
+                    Take a look at our school calendar.
                   </p>
                 </div>
-                <Image
-                  src="/images/blogs.png"
-                  width={500}
-                  height={500}
-                  alt="events image"
-                  className="absolute right-0 lg:right-0 bottom-0 w-[80%] max-w-[300px] object-contain rounded-2xl"
-                />
+                
               </a>
             </WobbleCard>
           </div>
-
-          {/* Contact us section */}
-          <div className="bg-[#010B13] p-6 mt-6 rounded-lg shadow-md max-w-full md:mr-8 md:ml-8 mb-4">
-            <h1 className="text-4xl text-white font-semibold mb-4 underline decoration-sky-300">
-              Contact Us
-            </h1>
-            <p className="text-lg text-white mb-4">
-              If you have any questions or suggestions, feel free to reach out
-              to us at:
-            </p>
-            <a
-              href="mailto:theinsights@britishmodelcollege.edu.np"
-              className="text-primary font-semibold text-lg hover:underline flex items-center"
-            >
-              theinsights@britishmodelcollege.edu.np
-            </a>
-            <div className="mt-6">
-              <h2 className="text-xl text-white font-semibold">Follow us:</h2>
-              <div className="flex space-x-4 mt-2">
-                <a href="#" className="text-white hover:text-sky-300">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#" className="text-white hover:text-sky-300">
-                  <i className="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
+        
       )}
     </div>
   );

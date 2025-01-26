@@ -28,7 +28,7 @@ const Page = () => {
           </p>
           <div className="flex space-x-6">
             <a
-              href="#"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfXTUhse5GuFSAQgOyEL6VeKFh8NUtRVx7XcnSSgxJgdW7hyw/viewform?usp=dialog" target="_blank"
               className="bg-blue-600 hover:bg-blue-700 px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-2xl font-medium text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 whitespace-nowrap"
             >
               Join the Club
