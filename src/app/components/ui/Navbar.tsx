@@ -12,7 +12,7 @@ const Navbar = () => {
     <header className="bg-[#111827] shadow-md z-10 relative">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo Section */}
-        <div className="logo">  
+        <div className="logo">
           <a href="/" className="h-8">
             <img
               src="/images/logo.png"
@@ -88,19 +88,42 @@ const Navbar = () => {
           <a
             href="about"
             className={`block font-medium text-gray-300 hover:text-white py-2 px-4 md:py-0 text-lg transition duration-300 ${
-              pathname === "/testimonials"
+              pathname === "/about"
                 ? "underline decoration-sky-500 decoration-solid decoration-[3px]"
                 : ""
             }`}
           >
-            About 
+            About
           </a>
+          <a
+            href="contact"
+            className={`block font-medium text-gray-300 hover:text-white py-2 px-4 md:py-0 text-lg transition duration-300 ${
+              pathname === "/contact"
+                ? "underline decoration-sky-500 decoration-solid decoration-[3px]"
+                : ""
+            }`}
+          >
+            Contact Us
+          </a>
+          {/* Conditional Threads Link */}
+          {isLoggedIn && (
+            <a
+              href="/threads"
+              className={`block font-medium text-gray-300 hover:text-white py-2 px-4 md:py-0 text-lg transition duration-300 ${
+                pathname === "/threads"
+                  ? "underline decoration-sky-500 decoration-solid decoration-[3px]"
+                  : ""
+              }`}
+            >
+              Threads
+            </a>
+          )}
           {/* Conditional Login/Dashboard Button */}
           <a
             href={isLoggedIn ? "profile" : "webLogin"}
             className={`block font-medium text-white ${
-              isLoggedIn 
-                ? "bg-indigo-600 hover:bg-indigo-800" 
+              isLoggedIn
+                ? "bg-indigo-600 hover:bg-indigo-800"
                 : "bg-blue-700 hover:bg-blue-800"
             } px-6 py-2 rounded-md md:ml-8 shadow-md transition duration-300 ${
               (pathname === "/webLogin" || pathname === "/profile")

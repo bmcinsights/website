@@ -18,7 +18,7 @@ export default async function news() {
     <div className="">
     <section className="container mx-auto my-12 sm:my-24 bg-black text-white px-4 sm:px-8 ">
       <div className="text-center">
-        <h1 className="font-bold text-5xl sm:text-6xl mb-6 text-primary">NEWS</h1>
+        <h1 className="font-bold text-5xl sm:text-6xl mb-6 text-primary">Threads</h1>
       </div>
 
       <div className="space-y-12">
