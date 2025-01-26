@@ -44,8 +44,8 @@ const ProfilePage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#010a11] text-white">
+      <div className="bg-[#111827] shadow-md rounded-lg p-6 w-full max-w-md">
         {/* User Image */}
         <div className="flex justify-center">
           <img
@@ -57,15 +57,15 @@ const ProfilePage = () => {
 
         {/* User Information */}
         <div className="text-center mt-4">
-          <h1 className="text-2xl font-bold text-gray-800">{user.username}</h1>
-          <p className="text-gray-600">{user.email}</p>
+          <h1 className="text-2xl font-bold text-white">{user.username}</h1>
+          <p className="text-gray-400">{user.email}</p>
         </div>
 
         {/* Profile Details */}
         <div className="mt-6 space-y-4">
           <div className="flex justify-between items-center">
-            <span className="text-gray-600">Username:</span>
-            <span className="font-semibold text-gray-800">{user.username}</span>
+            <span className="text-gray-400">Username:</span>
+            <span className="font-semibold text-white">{user.username}</span>
           </div>
         </div>
 

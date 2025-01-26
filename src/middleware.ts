@@ -34,7 +34,7 @@ export async function middleware(request: NextRequest) {
     path === "/profile" ||
     path === "/threads" ||
     path === "/calender" ||
-    path === "/settings"
+    path === "/userprofile"
   ) {
     if (userStatus !== "true") {
       const response = NextResponse.redirect(new URL("/errorpage", request.nextUrl));
@@ -68,5 +68,6 @@ export const config = {
     "/blog",
     "/events",
     "/calender",
+    "/userprofile",
   ],
 };

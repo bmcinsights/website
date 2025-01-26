@@ -4,7 +4,7 @@ export default function Blog() {
   return (
     <section className="container h-screen mx-auto my-12 px-4">
       <div className="mb-8">
-        <h1 className="font-montserrat text-center text-4xl sm:text-6xl my-4 font-bold text-primary">
+        <h1 className="text-center text-4xl md:text-6xl my-4 font-bold text-primary">
           Blogs
         </h1>
       </div>
