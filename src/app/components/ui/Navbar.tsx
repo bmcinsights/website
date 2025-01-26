@@ -1,16 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import { usePathname } from "next/navigation"; // Import the correct hook
+import { usePathname } from "next/navigation";
+import { useAuth } from '@/context/AuthContext';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname(); // Get the current path
+  const pathname = usePathname();
+  const { isLoggedIn } = useAuth();
 
   return (
     <header className="bg-[#111827] shadow-md z-10 relative">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo Section */}
-        <div className="logo">
+        <div className="logo">  
           <a href="/" className="h-8">
             <img
               src="/images/logo.png"
@@ -24,7 +26,7 @@ const Navbar = () => {
         <button
           className="block md:hidden text-gray-300 hover:text-gray-100 focus:outline-none transition duration-300"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          style={{ zIndex: 20 }} // Ensures it stays above other components
+          style={{ zIndex: 20 }}
         >
           {isMenuOpen ? (
             <svg
@@ -63,7 +65,7 @@ const Navbar = () => {
         <nav
           className={`absolute md:relative top-16 md:top-auto left-0 w-full bg-gray-900 md:bg-transparent z-20 md:z-auto md:flex items-center justify-end md:space-x-8 transition duration-300 ${
             isMenuOpen ? "block" : "hidden"
-          } ${isMenuOpen ? "bg-[#1f2937]" : ""}`} // Make dropdown darker when menu is open
+          } ${isMenuOpen ? "bg-[#1f2937]" : ""}`}
         >
           <a
             href="/"
@@ -93,16 +95,20 @@ const Navbar = () => {
           >
             About 
           </a>
-          {/* Login Button */}
+          {/* Conditional Login/Dashboard Button */}
           <a
-            href="webLogin"
-            className={`block font-medium text-white bg-blue-700 hover:bg-blue-800 px-6 py-2 rounded-md md:ml-8 shadow-md transition duration-300 ${
-              pathname === "/login"
+            href={isLoggedIn ? "profile" : "webLogin"}
+            className={`block font-medium text-white ${
+              isLoggedIn 
+                ? "bg-green-700 hover:bg-green-800" 
+                : "bg-blue-700 hover:bg-blue-800"
+            } px-6 py-2 rounded-md md:ml-8 shadow-md transition duration-300 ${
+              (pathname === "/webLogin" || pathname === "/profile")
                 ? "underline decoration-sky-500 decoration-solid decoration-[3px]"
                 : ""
             }`}
           >
-            Login
+            {isLoggedIn ? "Dashboard" : "Login"}
           </a>
         </nav>
       </div>

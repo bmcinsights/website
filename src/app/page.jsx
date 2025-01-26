@@ -127,7 +127,7 @@ const Page = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials 
       <section className="bg-[#010a11] py-24 px-6 md:px-12 mt-16">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-montserrat text-3xl sm:text-4xl md:text-4xl font-bold mb-8 text-primary">
@@ -151,6 +151,7 @@ const Page = () => {
           </p>
         </div>
       </section>
+      */}
     </div>
   );
 };

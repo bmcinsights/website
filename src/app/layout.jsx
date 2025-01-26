@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 
 // custom components
 import Navbar from "./components/ui/Navbar";
+import { AuthProvider } from '@/context/AuthContext';
 
 // custom fonts
 const Poppins_f = Poppins({
@@ -26,8 +27,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${Poppins_f.variable} ${Montserrat_f.variable} bg-black antialiased dark`}
       >
+        <AuthProvider>
         <Navbar />
         {children}
+        </AuthProvider>
       </body>
     </html>
   );
