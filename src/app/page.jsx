@@ -66,7 +66,7 @@ const Page = () => {
             space for students to engage and thrive.
           </p>
           <a
-            href="#"
+            href="/contact"
             className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-2xl text-lg font-medium text-white shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
           >
             Get Involved
