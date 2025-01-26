@@ -8,14 +8,7 @@ export default function Blog() {
           BLOGS
         </h1>
       </div>
-      <div className=" text-sky-300 font-semibold mb-8 pb-4">
-        <p className="text-lg sm:text-xl">
-          To add your blog posts contact us at:{" "}
-          <a href="mailto:insights@example.com" className="text-white underline decoration-[#2563eb]">
-            insights@example.com
-          </a>
-        </p>
-      </div>
+
       <div className="space-y-8">
         <div className="bg-[#010b13] bg-opacity-90 rounded-xl p-8 text-white">
           <a href="/blog/posts/floods" className="">

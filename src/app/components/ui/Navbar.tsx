@@ -100,11 +100,11 @@ const Navbar = () => {
             href={isLoggedIn ? "profile" : "webLogin"}
             className={`block font-medium text-white ${
               isLoggedIn 
-                ? "bg-green-700 hover:bg-green-800" 
+                ? "bg-indigo-600 hover:bg-indigo-800" 
                 : "bg-blue-700 hover:bg-blue-800"
             } px-6 py-2 rounded-md md:ml-8 shadow-md transition duration-300 ${
               (pathname === "/webLogin" || pathname === "/profile")
-                ? "underline decoration-sky-500 decoration-solid decoration-[3px]"
+                ? "bg-green-600"
                 : ""
             }`}
           >
