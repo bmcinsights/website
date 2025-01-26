@@ -2,7 +2,14 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -56,7 +63,11 @@ export default function SignupPage() {
   };
 
   useEffect(() => {
-    if (user.email.length > 0 && user.password.length > 0 && user.username.length > 0) {
+    if (
+      user.email.length > 0 &&
+      user.password.length > 0 &&
+      user.username.length > 0
+    ) {
       setButtonDisabled(false);
     } else {
       setButtonDisabled(true);
@@ -64,81 +75,82 @@ export default function SignupPage() {
   }, [user]);
 
   return (
-    <section className="flex justify-center items-center h-screen">
-      <div className="w-full max-w-6xl md:mr-24">
-        <Card className="grid grid-flow-col overflow-hidden bg-inherit text-text">
-          <div className="p-20">
-            <CardHeader>
-              <CardTitle className="font-tertiary text-4xl">Sign Up</CardTitle>
-              <CardDescription className="font-secondary">Enter your sign-up details</CardDescription>
-            </CardHeader>
+    <div className="min-h-screen bg-black flex items-center justify-center p-4">
+      <div className="w-full max-w-md p-8 bg-[#010a11] border border-gray-800 rounded-xl shadow-2xl">
+        <div className="space-y-6">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-2 font-tertiary">
+              Create Account
+            </h1>
+            <p className="text-gray-400 text-sm">Join our community today</p>
+          </div>
 
-            <CardContent>
-              <form>
-                <div className="grid gap-8 text-black [&_input]:active:outline-none [&_input]:text-text [&_label]:font-bold [&_label]:text-primary [&_input]:bg-inherit">
-                  <div>
-                    <Label>Username</Label>
-                    <Input
-                      onChange={(e) => setUser({ ...user, username: e.target.value })}
-                      id="username"
-                      value={user.username}
-                      placeholder="Username"
-                    />
-                  </div>
+          <form className="space-y-5">
+            <div>
+              <label className="text-sm font-medium text-gray-300 block mb-2">
+                Username
+              </label>
+              <input
+                type="text"
+                onChange={(e) => setUser({ ...user, username: e.target.value })}
+                value={user.username}
+                className="w-full p-3 bg-[#1a1f2e] border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 text-white"
+                placeholder="Enter username"
+              />
+            </div>
 
-                  <div>
-                    <Label>E-mail</Label>
-                    <Input
-                      onChange={(e) => setUser({ ...user, email: e.target.value })}
-                      id="email"
-                      value={user.email}
-                      placeholder="E-mail"
-                    />
-                  </div>
+            <div>
+              <label className="text-sm font-medium text-gray-300 block mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                onChange={(e) => setUser({ ...user, email: e.target.value })}
+                value={user.email}
+                className="w-full p-3 bg-[#1a1f2e] border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 text-white"
+                placeholder="name@britishmodelcollege.edu.np"
+              />
+            </div>
 
-                  <div>
-                    <Label>Password</Label>
-                    <Input
-                      onChange={(e) => setUser({ ...user, password: e.target.value })}
-                      id="password"
-                      type="password"
-                      value={user.password}
-                      placeholder="Password"
-                    />
-                  </div>
-                </div>
-              </form>
-              {errorMessage && (
-                <p className="text-red-500 text-sm mt-2">{errorMessage}</p>
-              )}
-            </CardContent>
+            <div>
+              <label className="text-sm font-medium text-gray-300 block mb-2">
+                Password
+              </label>
+              <input
+                type="password"
+                onChange={(e) => setUser({ ...user, password: e.target.value })}
+                value={user.password}
+                className="w-full p-3 bg-[#1a1f2e] border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 text-white"
+                placeholder="••••••••"
+              />
+            </div>
 
-            <CardFooter className="container mx-auto gap-2 mt-4 grid">
-              <Button
-                onClick={onSignup}
-                className="w-full font-bold hover:bg-secondary border-2 bg-inherit border-secondary"
-                disabled={buttonDisabled || loading}
-              >
-                {loading ? <LoadingSpinner /> : "Sign Up"}
-              </Button>
-              <div>
-                <Link href="/webLogin">
-                  <h1 className="text-xs text-center text-gray-400 hover:text-gray-500">Already Have An Account?</h1>
-                </Link>
+            {errorMessage && (
+              <div className="text-red-500 text-sm p-2 bg-red-500/10 rounded">
+                {errorMessage}
               </div>
-            </CardFooter>
-          </div>
+            )}
 
-          <div className="hidden md:block h-full">
-            <img
-              src="/images/bmc.jpg"
-              alt="Decorative"
-              className="h-full object-center object-cover"
-            />
+            <button
+              onClick={onSignup}
+              disabled={buttonDisabled || loading}
+              className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 disabled:opacity-50"
+            >
+              {loading ? <LoadingSpinner /> : "Sign Up"}
+            </button>
+          </form>
+
+          <div className="text-center">
+            <Link
+              href="/webLogin"
+              className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
+            >
+              Already have an account? Sign in
+            </Link>
           </div>
-        </Card>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
 

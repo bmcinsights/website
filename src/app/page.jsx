@@ -10,13 +10,21 @@ const Page = () => {
             The BMC Insights
           </h1>
           <p className="text-lg font-medium sm:text-xl md:text-xl text-gray-300 mb-8 leading-relaxed">
-            The BMC Insights is a club under <span className="text-sky-300 font-bold"><a href="https://www.thebritishcollege.edu.np/pages/the-british-model-college-lalitpur-campus" target="_blank">British Model College</a></span> that provides
-            a platform for students to share knowledge, collaborate on projects,
-            and grow together. We focus on academic excellence, personal
-            development, and extracurricular activities to help students enhance
-            their college experience. Join us to engage with like-minded peers,
-            expand your skills, and contribute to the college community in
-            meaningful ways.
+            The BMC Insights is a club under{" "}
+            <span className="text-sky-300 font-bold">
+              <a
+                href="https://www.thebritishcollege.edu.np/pages/the-british-model-college-lalitpur-campus"
+                target="_blank"
+              >
+                British Model College
+              </a>
+            </span>{" "}
+            that provides a platform for students to share knowledge,
+            collaborate on projects, and grow together. We focus on academic
+            excellence, personal development, and extracurricular activities to
+            help students enhance their college experience. Join us to engage
+            with like-minded peers, expand your skills, and contribute to the
+            college community in meaningful ways.
           </p>
           <div className="flex space-x-6">
             <a
@@ -84,15 +92,13 @@ const Page = () => {
               <h3 className="text-xl font-bold text-white mb-2 hover:text-blue-400">
                 <a href="#">BMC MUN 9.0</a>
               </h3>
-              <p className="text-gray-300 font-medium">
-              Feb 7-9, 2025 
-              </p>
+              <p className="text-gray-300 font-medium">Feb 7-9, 2025</p>
             </div>
             <div className="bg-[#111827] p-6 rounded-xl shadow-lg">
               <iframe
                 width="100%"
                 height="258"
-                src="https://www.youtube.com/embed/Z3AZCZSdrSg?=0&autoplay=1&mute=1&loop=1"
+                src="https://www.youtube.com/embed/Z3AZCZSdrSg?=0&autoplay=1&mute=1&loop=1&playlist=Z3AZCZSdrSg"
                 title="BMC Sports Week 2024 Highlights: A Week of Thrills, Skills &amp; Fun Games"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -145,31 +151,6 @@ const Page = () => {
           </p>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-[#010a11] py-6 px-6 text-center border-t border-gray-700 mt-16">
-        <div className="flex justify-center space-x-8 mb-4">
-          <a href="#" className="text-blue-200 hover:text-blue-400">
-            Facebook
-          </a>
-          <a href="#" className="text-blue-200 hover:text-blue-400">
-            Instagram
-          </a>
-          <a href="#" className="text-blue-200 hover:text-blue-400">
-            Twitter
-          </a>
-        </div>
-        <p className="text-gray-400 text-sm sm:text-base">
-          &copy; 2023 The BMC Insights. All rights reserved. Contact us at{" "}
-          <a
-            href="mailto:contact@bmcinsights.com"
-            className="text-blue-200 hover:text-blue-400"
-          >
-            contact@bmcinsights.com
-          </a>
-          .
-        </p>
-      </footer>
     </div>
   );
 };

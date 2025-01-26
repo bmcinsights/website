@@ -42,7 +42,7 @@ export default function LoginPage() {
     }, [user]);
 
     return (
-        <div className="relative flex min-h-screen">
+        <div className="relative flex min-h-screen bg-black text-white">
             {/* Fire particles container */}
             <div className="fire-container">
                 {[...Array(50)].map((_, i) => (
@@ -51,47 +51,49 @@ export default function LoginPage() {
             </div>
 
             {/* Right Side - Form */}
-            <div className="w-full bg-inherit flex items-center justify-center relative z-10">
-                <div className="w-full max-w-md p-8 border-2 border-primary py-36 px-24 rounded-xl">
-                    <h1 className="text-4xl font-bold font-tertiary text-center mb-12 text-white">
+            <div className="w-full flex items-center justify-center relative z-10 py-10 px-6 md:p-16">
+                <div className="w-full max-w-md p-8 bg-[#010a11] border-2 border-[#4a5568] py-10 px-8 rounded-xl shadow-lg">
+                    <h1 className="text-4xl font-bold font-tertiary text-center mb-6">
                         {loading ? <LoadingSpinner /> : "Sign in"}
                     </h1>
+
                     {errorMessage && ( // Display error message if exists
-                        <div className="bg-red-500 text-white text-center p-2 rounded mb-4">
+                        <div className="bg-red-500 text-white text-center p-3 rounded mb-6">
                             {errorMessage}
                         </div>
                     )}
-                    <label htmlFor="email" className="text-primary block text-sm font-medium text-gray-300">Email</label>
+
+                    <label htmlFor="email" className=" block text-sm font-medium text-gray-300 mb-2">Email</label>
                     <input
                         type="email"
                         id="email"
                         value={user.email}
                         onChange={(e) => setUser({ ...user, email: e.target.value })}
                         placeholder="Email"
-                        className="w-full p-2 mt-2 mb-4 border border-white bg-inherit rounded-lg focus:ring focus:ring-red-500 text-text"
+                        className="w-full p-3 mb-6 bg-[#121b23] text-white border border-[#4a5568] rounded-lg focus:ring-2 focus:ring-red-500"
                     />
 
-                    <label htmlFor="password" className="text-primary block text-sm font-medium text-gray-300">Password</label>
+                    <label htmlFor="password" className=" block text-sm font-medium text-gray-300 mb-2">Password</label>
                     <input
                         type="password"
                         id="password"
                         value={user.password}
                         onChange={(e) => setUser({ ...user, password: e.target.value })}
                         placeholder="Password"
-                        className="w-full p-2 mt-2 mb-4 border border-white bg-inherit rounded-lg focus:ring focus:ring-red-500 text-text"
+                        className="w-full p-3 mb-6 bg-[#121b23] text-white border border-[#4a5568] rounded-lg focus:ring-2 focus:ring-red-500"
                     />
 
-                    <div className="mt-12">
+                    <div className="mt-8">
                         <button
                             onClick={onLogIn}
                             disabled={buttonDisabled}
-                            className="w-full bg-none py-2 font-bold hover:bg-secondary transition-colors duration-150 mb-4 text-white border-2 border-secondary rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                            className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-800 transition-colors duration-150 mb-4"
                         >
                             Sign In
                         </button>
 
                         <div className="text-center">
-                            <a href="/signup" className="text-secondary font-md text-sm hover:text-primary transition-all duration-150">Sign Up</a>
+                            <a href="/signup" className="text-white font-md text-sm hover:text-sky-600 transition-all duration-150">Don't have an account? Sign Up</a>
                         </div>
                     </div>
                 </div>
