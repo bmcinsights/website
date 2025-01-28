@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://use.typekit.net/hjq1ell.css");
 @layer base {
   body {
     @apply bg-black font-primary text-text;

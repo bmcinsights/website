@@ -6,7 +6,7 @@ const Page = () => {
       {/* Main Content */}
       <div className="md:flex md:space-x-12 px-6 md:px-8 py-10 md:py-24 items-center md:mx-auto max-w-7xl">
         <div className="md:w-1/2">
-          <h1 className="font-montserrat text-4xl sm:text-5xl md:text-[56px] my-4 font-bold text-primary">
+          <h1 className="text-4xl sm:text-5xl md:text-[56px] my-4 font-bold text-primary">
             The BMC Insights
           </h1>
           <p className="text-lg font-medium sm:text-xl md:text-xl text-gray-300 mb-8 leading-relaxed">
@@ -57,7 +57,7 @@ const Page = () => {
       {/* Our Activities */}
       <section className="bg-[#010a11] py-24 px-6 md:px-12 mt-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-montserrat text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-primary">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-primary">
             Our Activities
           </h2>
           <p className="text-lg sm:text-xl md:text-xl text-gray-300 mb-8 leading-relaxed">
@@ -77,7 +77,7 @@ const Page = () => {
       {/* Some events here. */}
       <section className="bg-black py-8 mt-16 px-6 md:px-12">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="font-montserrat text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-primary">
+          <h2 className=" text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-primary">
             Upcoming Events
           </h2>
           <p className="text-lg sm:text-xl md:text-xl text-gray-300 mb-8 leading-relaxed">
@@ -130,7 +130,7 @@ const Page = () => {
       {/* Featured */}
       <section className="bg-[#010a11] py-24 px-6 md:px-12 mt-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-montserrat text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-primary">
+          <h2 className=" text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-primary">
             Featured
           </h2>
           <div className="bg-[#111827] bg-opacity-90 rounded-xl p-8 text-white text-start">
