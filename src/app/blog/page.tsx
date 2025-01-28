@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Blog() {
   return (
-    <section className="container h-screen mx-auto my-12 px-4">
+    <section className="container  mx-auto my-12 px-4">
       <div className="mb-8">
         <h1 className="text-center text-4xl md:text-6xl my-4 font-bold text-primary">
           Blogs
@@ -10,6 +10,21 @@ export default function Blog() {
       </div>
 
       <div className="space-y-8">
+        <div className="bg-[#010b13] bg-opacity-90 rounded-xl p-8 text-white">
+          <a href="/blog/posts/bmcalevels" className="">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-blue-200">
+              A-Levels in Nepal: An Insider's Guide from a BMC Student
+            </h2>
+          </a>
+          <p className="text-lg sm:text-xl">
+            Hey there, SEE graduate! I'm Manish, a second-year A-Level student
+            at British Model College, and I know exactly what's going through
+            your mind right now. Two years ago, I was in your shoes, puzzling
+            over the big question: "+2 or A-Levels?" After experiencing A-Levels
+            at BMC firsthand, I want to share everything I wish I'd known back
+            then.
+          </p>
+        </div>
         <div className="bg-[#010b13] bg-opacity-90 rounded-xl p-8 text-white">
           <a href="/blog/posts/floods" className="">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-blue-200">

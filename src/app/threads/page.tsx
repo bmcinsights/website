@@ -59,7 +59,7 @@ export default function News() {
 
   return (
     <div className="">
-      <section className="container h-screen mx-auto my-16 md:my-16 bg-black text-white px-4 sm:px-8">
+      <section className="container mx-auto my-16 md:my-16 bg-black text-white px-4 sm:px-8">
         <div className="text-center">
           <h1 className="font-bold text-5xl sm:text-6xl mb-6 text-primary">Threads</h1>
         </div>
