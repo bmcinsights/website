@@ -28,7 +28,8 @@ const Page = () => {
           </p>
           <div className="flex space-x-6">
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfXTUhse5GuFSAQgOyEL6VeKFh8NUtRVx7XcnSSgxJgdW7hyw/viewform?usp=dialog" target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfXTUhse5GuFSAQgOyEL6VeKFh8NUtRVx7XcnSSgxJgdW7hyw/viewform?usp=dialog"
+              target="_blank"
               className="bg-blue-600 hover:bg-blue-700 px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg rounded-2xl font-medium text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 whitespace-nowrap"
             >
               Join the Club
@@ -74,7 +75,7 @@ const Page = () => {
         </div>
       </section>
       {/* Some events here. */}
-      <section className="bg-black py-24 px-6 md:px-12">
+      <section className="bg-black py-8 mt-16 px-6 md:px-12">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="font-montserrat text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-primary">
             Upcoming Events
@@ -126,7 +127,29 @@ const Page = () => {
           </div>
         </div>
       </section>
-
+      {/* Featured */}
+      <section className="bg-[#010a11] py-24 px-6 md:px-12 mt-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-montserrat text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-primary">
+            Featured
+          </h2>
+          <div className="bg-[#111827] bg-opacity-90 rounded-xl p-8 text-white text-start">
+            <a href="/blog/posts/bmcalevels" className="">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-blue-200">
+                A-Levels in Nepal: An Insider's Guide from a BMC Student
+              </h2>
+            </a>
+            <p className="text-lg sm:text-xl">
+              Hey there, SEE graduate! I'm Manish, a second-year A-Level student
+              at British Model College, and I know exactly what's going through
+              your mind right now. Two years ago, I was in your shoes, puzzling
+              over the big question: "+2 or A-Levels?" After experiencing
+              A-Levels at BMC firsthand, I want to share everything I wish I'd
+              known back then.
+            </p>
+          </div>
+        </div>
+      </section>
       {/* Testimonials 
       <section className="bg-[#010a11] py-24 px-6 md:px-12 mt-16">
         <div className="max-w-4xl mx-auto text-center">
