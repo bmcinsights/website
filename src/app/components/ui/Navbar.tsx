@@ -78,9 +78,9 @@ const Navbar = () => {
             Home
           </a>
           <a
-            href="blog"
+            href="/blog"
             className={`block font-medium text-gray-300 hover:text-white py-2 px-4 md:py-0 text-lg transition duration-300 ${
-              pathname === "/blog"
+              pathname.startsWith("/blog")
                 ? "underline decoration-sky-500 decoration-solid decoration-[3px]"
                 : ""
             }`}
@@ -88,7 +88,7 @@ const Navbar = () => {
             Blogs
           </a>
           <a
-            href="about"
+            href="/about"
             className={`block font-medium text-gray-300 hover:text-white py-2 px-4 md:py-0 text-lg transition duration-300 ${
               pathname === "/about"
                 ? "underline decoration-sky-500 decoration-solid decoration-[3px]"
@@ -98,7 +98,7 @@ const Navbar = () => {
             About
           </a>
           <a
-            href="contact"
+            href="/contact"
             className={`block font-medium text-gray-300 hover:text-white py-2 px-4 md:py-0 text-lg transition duration-300 ${
               pathname === "/contact"
                 ? "underline decoration-sky-500 decoration-solid decoration-[3px]"
@@ -112,7 +112,7 @@ const Navbar = () => {
             <a
               href="/threads"
               className={`block font-medium text-gray-300 hover:text-white py-2 px-4 md:py-0 text-lg transition duration-300 ${
-                pathname === "/threads"
+                pathname.startsWith("/threads")
                   ? "underline decoration-sky-500 decoration-solid decoration-[3px]"
                   : ""
               }`}
@@ -122,7 +122,7 @@ const Navbar = () => {
           )}
           {/* Conditional Login/Dashboard Button */}
           <a
-            href={isLoggedIn ? "profile" : "webLogin"}
+            href={isLoggedIn ? "/profile" : "/webLogin"}
             className={`block font-medium text-white ${
               isLoggedIn
                 ? "bg-indigo-600 hover:bg-indigo-800"
@@ -145,7 +145,8 @@ const Navbar = () => {
                   : ""
               }`}
             >
-              <i className="fas fa-cog hidden md:block"></i> <span className="md:hidden">Account</span>
+              <i className="fas fa-cog hidden md:block"></i>{" "}
+              <span className="md:hidden">Account</span>
             </a>
           )}
         </nav>

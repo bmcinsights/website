@@ -134,18 +134,28 @@ const Page = () => {
             Featured
           </h2>
           <div className="bg-[#111827] bg-opacity-90 rounded-xl p-8 text-white text-start">
+            <div>
+              <img
+                src="/images/alevels.jpg"
+                alt="Featured"
+                className="w-full h-64 object-contain md:object-cover rounded-md mb-4"
+              />
+            </div>
             <a href="/blog/posts/bmcalevels" className="">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-blue-200">
                 A-Levels in Nepal: An Insider's Guide from a BMC Student
               </h2>
             </a>
             <p className="text-lg sm:text-xl">
-              Hey there, SEE graduate! I'm Manish, a second-year A-Level student
-              at British Model College, and I know exactly what's going through
-              your mind right now. Two years ago, I was in your shoes, puzzling
-              over the big question: "+2 or A-Levels?" After experiencing
-              A-Levels at BMC firsthand, I want to share everything I wish I'd
-              known back then.
+              Hey there! Let me guess - you've just finished SEE and everyone's
+              throwing advice at you about what to do next. "+2 is safer!"
+              "A-Levels will open more doors!" "But what about Nepali subject?"
+              Trust me, I know exactly how overwhelming it feels. I'm Manish,
+              currently in my second year at British Model College (BMC), and
+              two years ago, I was just as confused as you probably are right
+              now. But since you're here, let me share the real scoop about
+              A-Levels at BMC - everything I wish someone had told me when I was
+              in your shoes.
             </p>
           </div>
         </div>

@@ -15,11 +15,14 @@ const BlogPost = () => {
           <img src="/images/alevels.jpg" alt="BMC A levels" />
         </div>
         <p className="text-gray-300 text-xl leading-relaxed">
-          Hey there, SEE graduate! I'm Manish, a second-year A-Level student at
-          British Model College, and I know exactly what's going through your
-          mind right now. Two years ago, I was in your shoes, puzzling over the
-          big question: "+2 or A-Levels?" After experiencing A-Levels at BMC
-          firsthand, I want to share everything I wish I'd known back then.
+          Hey there! Let me guess - you've just finished SEE and everyone's
+          throwing advice at you about what to do next. "+2 is safer!" "A-Levels
+          will open more doors!" "But what about Nepali subject?" Trust me, I
+          know exactly how overwhelming it feels. I'm Manish, currently in my
+          second year at British Model College (BMC), and two years ago, I was
+          just as confused as you probably are right now. But since you're here,
+          let me share the real scoop about A-Levels at BMC - everything I wish
+          someone had told me when I was in your shoes.
         </p>
 
         <p className="text-gray-300 text-xl leading-relaxed mt-4">
@@ -40,17 +43,19 @@ const BlogPost = () => {
           - Business stream: Business, Economics, Accounting, Mathematics
           <br />
           - Technology stream: Computer Science, Physics, Mathematics
-          <br />
-          - Mixed combinations are totally possible too!(yes, really!)
+          <br />- Mixed combinations are totally possible too!(yes, really!)
         </p>
 
         <p className="text-gray-300 text-xl leading-relaxed mt-4">
-          <span className="font-semibold">Life at BMC: What to Actually Expect</span>
-          <br /> Let me paint you a picture of what your days might look like here:
+          <span className="font-semibold">
+            Life at BMC: What to Actually Expect
+          </span>
+          <br /> Let me paint you a picture of what your days might look like
+          here:
         </p>
 
         <p className="text-gray-300 text-xl leading-relaxed mt-4">
-          <span className="font-medium">The Academic Scene</span>
+          <span className="font-bold">The Academic Scene</span>
           <br />
           - Classes usually run from 10:00 AM to 4:00 PM (with 2-3 breaks in
           between)
@@ -61,28 +66,28 @@ const BlogPost = () => {
           <br />
           - Teachers who feel more like mentors - they're always up for a chat
           after class
-          <br />
-          - Regular assessments (trust me, they help you improve!)
+          <br />- Regular assessments (trust me, they help you improve!)
         </p>
 
         <p className="text-gray-300 text-xl leading-relaxed mt-4">
-          <span className="font-medium">Beyond the Books</span>
+          <span className="fon-bold">Beyond the Books</span>
           <br />
           College life at BMC is where it gets exciting:
           <br />
-          - I'm part of The BMC Insights team (co-founded it) - we run our own web
-          platform where we publish research, blogs, events at BMC
+          - I'm part of The BMC Insights team (co-founded it) - we run our own
+          web platform where we publish research, blogs, events at BMC
           <br />
           - Tons of clubs: Debate, MUN, Sports, Music, etc.
           <br />
           - Student engaging events like Science Fair, Workshops, Inter-School
           Competitions
-          <br />
-          - Sports competitions (our football team is pretty decent!)
+          <br />- Sports competitions (our football team is pretty decent!)
         </p>
 
         <p className="text-gray-300 text-xl leading-relaxed mt-4">
-          <span className="font-semibold">Real Talk: Transitioning from SEE</span>
+          <span className="font-semibold">
+            Real Talk: Transitioning from SEE
+          </span>
           <br />
           Not gonna lie - the first few months were a bit challenging. But BMC
           has your back:
@@ -93,12 +98,13 @@ const BlogPost = () => {
           <br />
           - Study skills workshops that teach you how to handle A-Level
           coursework
-          <br />
-          - Super helpful teachers who understand you're adjusting
+          <br />- Super helpful teachers who understand you're adjusting
         </p>
 
         <p className="text-gray-300 text-xl leading-relaxed mt-4">
-          <span className="font-semibold">The BMC Edge (No Corporate Speak, Just Facts)</span>
+          <span className="font-semibold">
+            The BMC Edge (No Corporate Speak, Just Facts)
+          </span>
           <br />
           What makes BMC different? Here's what I've experienced:
           <br />
@@ -107,12 +113,13 @@ const BlogPost = () => {
           - Library with great study spaces and resources
           <br />
           - Regular guest speakers from different fields
-          <br />
-          - University counseling that actually works
+          <br />- University counseling that actually works
         </p>
 
         <p className="text-gray-300 text-xl leading-relaxed mt-4">
-          <span className="font-semibold">Success Stories (Because You Want to Know Where This Leads)</span>
+          <span className="font-semibold">
+            Success Stories (Because You Want to Know Where This Leads)
+          </span>
           <br />
           <i>Success stories section is still under development.</i>
         </p>
@@ -128,12 +135,13 @@ const BlogPost = () => {
           - Merit scholarships can cover up to 100% of tuition
           <br />
           - All facilities included in fees (no hidden charges)
-          <br />
-          - Extra classes and support at no additional cost
+          <br />- Extra classes and support at no additional cost
         </p>
 
         <p className="text-gray-300 text-xl leading-relaxed mt-4">
-          <span className="font-semibold">Why I Chose BMC (And Why You Might Too)</span>
+          <span className="font-semibold">
+            Why I Chose BMC (And Why You Might Too)
+          </span>
           <br />
           What sold me on BMC was:
           <br />
@@ -144,8 +152,8 @@ const BlogPost = () => {
           - Amazing friends from diverse backgrounds
           <br />
           - Teachers who know their stuff and actually care
-          <br />
-          - A study environment that pushes you to think, not just memorize
+          <br />- A study environment that pushes you to think, not just
+          memorize
         </p>
 
         <p className="text-gray-300 text-xl leading-relaxed mt-4">
@@ -160,8 +168,7 @@ const BlogPost = () => {
           - Chat with current students (including me!)
           <br />
           - Meet our teachers
-          <br />
-          - Tour the campus—seeing is believing
+          <br />- Tour the campus—seeing is believing
         </p>
 
         <p className="text-gray-300 text-xl leading-relaxed mt-4">
@@ -172,8 +179,8 @@ const BlogPost = () => {
           anywhere in the world, and helps you grow as a person - then BMC might
           be your place.
           <br />
-          Still got questions? Drop by BMC or reach out through our website. We'd
-          love to show you around!
+          Still got questions? Drop by BMC or reach out through our website.
+          We'd love to show you around!
         </p>
 
         <p className="text-gray-300 text-xl leading-relaxed mt-4">
