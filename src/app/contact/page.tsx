@@ -7,7 +7,7 @@ const ContactUs = () => {
 
   if (state.succeeded) {
     return (
-      <div className="bg-black md:my-8 text-white h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div className="md:my-8 text-text h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center text-primary">
           Thank You!
         </h1>
@@ -19,11 +19,11 @@ const ContactUs = () => {
   }
 
   return (
-    <div className="bg-black md:my-4 text-white h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="md:my-4 text-text h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
       <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center text-primary">
         Contact Us
       </h1>
-      <p className="text-lg sm:text-xl mb-8 text-center font-medium">
+      <p className="text-text text-lg sm:text-xl mb-8 text-center font-medium">
         Either mail us at{" "}
         <a
           href="mailto:theinsights@britishmodelcollege.edu.np"
@@ -36,12 +36,12 @@ const ContactUs = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="bg-[#010a11] p-8 sm:p-10 lg:p-12 rounded-2xl shadow-lg w-full max-w-lg"
+        className="bg-secondary bg-opacity-30 p-8 sm:p-10 lg:p-12 rounded-2xl shadow-lg w-full max-w-lg"
       >
         <div className="mb-6">
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-300 mb-2"
+            className="block text-sm font-medium text-text mb-2"
           >
             Name
           </label>
@@ -50,7 +50,7 @@ const ContactUs = () => {
             id="name"
             name="name"
             placeholder="Enter your name"
-            className="w-full p-3 rounded-lg bg-gray-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="w-full p-3 rounded-lg bg-secondary bg-opacity-40 text-text placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             required
           />
         </div>
@@ -58,7 +58,7 @@ const ContactUs = () => {
         <div className="mb-6">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-300 mb-2"
+            className="block text-sm font-medium text-text mb-2"
           >
             Email
           </label>
@@ -67,7 +67,7 @@ const ContactUs = () => {
             id="email"
             name="email"
             placeholder="Enter your email"
-            className="w-full p-3 rounded-lg bg-gray-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="w-full p-3 rounded-lg bg-secondary bg-opacity-40 text-text placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             required
           />
           <ValidationError
@@ -80,7 +80,7 @@ const ContactUs = () => {
         <div className="mb-6">
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-gray-300 mb-2"
+            className="block text-sm font-medium text-text mb-2"
           >
             Message
           </label>
@@ -90,7 +90,7 @@ const ContactUs = () => {
             placeholder="Enter your message"
             rows={4}
             required
-            className="w-full p-3 rounded-lg bg-gray-800 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="w-full p-3 rounded-lg bg-secondary bg-opacity-40 text-text placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none"
           ></textarea>
           <ValidationError
             prefix="Message"
@@ -102,7 +102,7 @@ const ContactUs = () => {
         <button
           type="submit"
           disabled={state.submitting}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg transition focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="w-full bg-primary hover:bg-opacity-60 text-background font-medium py-3 rounded-lg transition focus:ring-2 focus:ring-blue-500 focus:outline-none"
         >
           Send Message
         </button>

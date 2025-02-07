@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#111827] text-white">
+    <footer className="bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
+        <div className="border-t border-secondary mt-8 pt-8 text-sm text-center">
           <p>
             &copy; {new Date().getFullYear()} The BMC Insights. All rights
             reserved.

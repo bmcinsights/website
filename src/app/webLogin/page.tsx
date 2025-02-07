@@ -42,7 +42,7 @@ export default function LoginPage() {
     }, [user]);
 
     return (
-        <div className="relative flex min-h-screen bg-black text-white">
+        <div className="relative flex min-h-screen text-text">
             {/* Fire particles container */}
             <div className="fire-container">
                 {[...Array(50)].map((_, i) => (
@@ -52,9 +52,9 @@ export default function LoginPage() {
 
             {/* Right Side - Form */}
             <div className="w-full flex items-center justify-center relative z-10 py-10 px-6 md:p-16">
-                <div className="w-full max-w-md p-8 bg-[#010a11] border-2 border-[#4a5568] py-10 px-8 rounded-xl shadow-lg">
-                    <h1 className="text-4xl font-bold font-tertiary text-center mb-6">
-                        {loading ? <LoadingSpinner /> : "Sign in"}
+                <div className="w-full max-w-md p-8 bg-secondary bg-opacity-10 border border-secondary py-10 px-8 rounded-xl shadow-lg">
+                    <h1 className="text-4xl font-bold font-tertiary text-center mb-6 text-accent">
+                        {loading ? <LoadingSpinner /> : "Log in"}
                     </h1>
 
                     {errorMessage && ( // Display error message if exists
@@ -63,37 +63,37 @@ export default function LoginPage() {
                         </div>
                     )}
 
-                    <label htmlFor="email" className=" block text-sm font-medium text-gray-300 mb-2">Email</label>
+                    <label htmlFor="email" className=" block text-sm font-medium text-accent mb-2">Email</label>
                     <input
                         type="email"
                         id="email"
                         value={user.email}
                         onChange={(e) => setUser({ ...user, email: e.target.value })}
                         placeholder="Email"
-                        className="w-full p-3 mb-6 bg-[#121b23] text-white border border-[#4a5568] rounded-lg focus:ring-2 focus:ring-red-500"
+                        className="w-full p-3 mb-6 bg-secondary bg-opacity-20 text-text border border-secondary rounded-lg focus:ring-2 focus:ring-red-500"
                     />
 
-                    <label htmlFor="password" className=" block text-sm font-medium text-gray-300 mb-2">Password</label>
+                    <label htmlFor="password" className=" block text-sm font-medium text-accent mb-2">Password</label>
                     <input
                         type="password"
                         id="password"
                         value={user.password}
                         onChange={(e) => setUser({ ...user, password: e.target.value })}
                         placeholder="Password"
-                        className="w-full p-3 mb-6 bg-[#121b23] text-white border border-[#4a5568] rounded-lg focus:ring-2 focus:ring-red-500"
+                        className="w-full p-3 mb-6 bg-secondary bg-opacity-20 text-text border border-secondary rounded-lg focus:ring-2 focus:ring-red-500"
                     />
 
                     <div className="mt-8">
                         <button
                             onClick={onLogIn}
                             disabled={buttonDisabled}
-                            className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-800 transition-colors duration-150 mb-4"
+                            className="w-full py-3 bg-primary text-white font-bold rounded-lg hover:bg-opacity-60 cursor-pointer transition-colors duration-150 mb-4"
                         >
-                            Sign In
+                            Log In
                         </button>
 
                         <div className="text-center">
-                            <a href="/signup" className="text-white font-md text-sm hover:text-sky-600 transition-all duration-150">Don't have an account? Sign Up</a>
+                            <a href="/signup" className="text-text text-opacity-60 font-md text-sm hover:text-text transition-all duration-150">Don't have an account? Sign Up</a>
                         </div>
                     </div>
                 </div>

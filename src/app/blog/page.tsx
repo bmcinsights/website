@@ -10,9 +10,9 @@ export default function Blog() {
       </div>
 
       <div className="space-y-8">
-        <div className="bg-[#010b13] bg-opacity-90 rounded-xl p-8 text-white">
+        <div className="bg-secondary bg-opacity-30 rounded-xl p-8 text-text text-opacity-60">
           <a href="/blog/posts/bmcalevels" className="">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-blue-200">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-text">
               A-Levels in Nepal: An Insider's Guide from a BMC Student
             </h2>
           </a>
@@ -27,9 +27,9 @@ export default function Blog() {
             - everything I wish someone had told me when I was in your shoes.
           </p>
         </div>
-        <div className="bg-[#010b13] bg-opacity-90 rounded-xl p-8 text-white">
+        <div className="bg-secondary bg-opacity-30 rounded-xl p-8 text-text text-opacity-60">
           <a href="/blog/posts/floods" className="">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-blue-200">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-text">
               Floods - Monsoon Season in Nepal
             </h2>
           </a>
@@ -42,9 +42,9 @@ export default function Blog() {
             monsoon season.
           </p>
         </div>
-        <div className="bg-[#010b13] bg-opacity-90 rounded-xl p-8 text-white">
+        <div className="bg-secondary bg-opacity-30 rounded-xl p-8 text-text text-opacity-60">
           <a href="/blog/posts/freshers" className="">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-blue-200">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-text">
               Freshers Party 2024
             </h2>
           </a>

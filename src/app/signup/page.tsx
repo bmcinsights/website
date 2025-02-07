@@ -75,11 +75,11 @@ export default function SignupPage() {
   }, [user]);
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center p-4">
-      <div className="w-full max-w-md p-8 bg-[#010a11] border border-gray-800 rounded-xl shadow-2xl">
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <div className="w-full max-w-md p-8 bg-secondary bg-opacity-10 border border-secondary rounded-xl shadow-2xl">
         <div className="space-y-6">
           <div className="text-center">
-            <h1 className="text-3xl font-bold text-white mb-2 font-tertiary">
+            <h1 className="text-3xl font-bold text-accent mb-2 font-tertiary">
               Create Account
             </h1>
             <p className="text-gray-400 text-sm">Join our community today</p>
@@ -87,40 +87,40 @@ export default function SignupPage() {
 
           <form className="space-y-5">
             <div>
-              <label className="text-sm font-medium text-gray-300 block mb-2">
+              <label className="text-sm font-medium text-accent block mb-2">
                 Username
               </label>
               <input
                 type="text"
                 onChange={(e) => setUser({ ...user, username: e.target.value })}
                 value={user.username}
-                className="w-full p-3 bg-[#1a1f2e] border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 text-white"
+                className="w-full p-3 bg-secondary bg-opacity-20 border border-secondary rounded-lg focus:ring-2 focus:ring-blue-500 text-text"
                 placeholder="Enter username"
               />
             </div>
 
             <div>
-              <label className="text-sm font-medium text-gray-300 block mb-2">
+              <label className="text-sm font-medium text-accent block mb-2">
                 Email
               </label>
               <input
                 type="email"
                 onChange={(e) => setUser({ ...user, email: e.target.value })}
                 value={user.email}
-                className="w-full p-3 bg-[#1a1f2e] border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 text-white"
+                className="w-full p-3 bg-secondary bg-opacity-20 border border-secondary rounded-lg focus:ring-2 focus:ring-blue-500 text-text"
                 placeholder="name@britishmodelcollege.edu.np"
               />
             </div>
 
             <div>
-              <label className="text-sm font-medium text-gray-300 block mb-2">
+              <label className="text-sm font-medium text-accent block mb-2">
                 Password
               </label>
               <input
                 type="password"
                 onChange={(e) => setUser({ ...user, password: e.target.value })}
                 value={user.password}
-                className="w-full p-3 bg-[#1a1f2e] border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 text-white"
+                className="w-full p-3 bg-secondary bg-opacity-20 border border-secondary rounded-lg focus:ring-2 focus:ring-blue-500 text-text"
                 placeholder="••••••••"
               />
             </div>
@@ -134,7 +134,7 @@ export default function SignupPage() {
             <button
               onClick={onSignup}
               disabled={buttonDisabled || loading}
-              className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 disabled:opacity-50"
+              className="w-full py-3 bg-primary text-white rounded-lg hover:bg-opacity-60 font-bold rounded-lg transition-colors duration-200 disabled:bg-text disabled:bg-opacity-30"
             >
               {loading ? <LoadingSpinner /> : "Sign Up"}
             </button>
@@ -143,7 +143,7 @@ export default function SignupPage() {
           <div className="text-center">
             <Link
               href="/webLogin"
-              className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
+              className="text-sm text-text text-opacity-60 hover:text-text transition-colors duration-200"
             >
               Already have an account? Sign in
             </Link>

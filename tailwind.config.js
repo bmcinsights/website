@@ -23,14 +23,15 @@ module.exports = {
       secondary: "var(--font-secondary)",
       tertiary: "var(--font-tertiary)",
       acumin: ["acumin-pro", "sans-serif"], // Base font family
+      faustina: ["Faustina", "sans-serif"],
     },
     extend: {
       colors: {
-        primary: "#d6d95d",
-        secondary: "#67a7bc",
-        background: "#000000",
-        foreground: "#4e6663",
-        text: "#eeeeee",
+        primary: "#2366a9",
+        secondary: "#1587c5",
+        background: "#ffffff",
+        accent: "#bc3d58",
+        text: "#000000",
       },
       fontFamily: {
         // Override the default sans font with Acumin Pro
