@@ -53,7 +53,7 @@ export default function LoginPage() {
             {/* Right Side - Form */}
             <div className="w-full flex items-center justify-center relative z-10 py-10 px-6 md:p-16">
                 <div className="w-full max-w-md p-8 bg-secondary bg-opacity-10 border border-secondary py-10 px-8 rounded-xl shadow-lg">
-                    <h1 className="text-4xl font-bold font-tertiary text-center mb-6 text-accent">
+                    <h1 className="text-4xl font-bold font-tertiary text-center mb-6">
                         {loading ? <LoadingSpinner /> : "Log in"}
                     </h1>
 
@@ -63,7 +63,7 @@ export default function LoginPage() {
                         </div>
                     )}
 
-                    <label htmlFor="email" className=" block text-sm font-medium text-accent mb-2">Email</label>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
                     <input
                         type="email"
                         id="email"
@@ -73,7 +73,7 @@ export default function LoginPage() {
                         className="w-full p-3 mb-6 bg-secondary bg-opacity-20 text-text border border-secondary rounded-lg focus:ring-2 focus:ring-red-500"
                     />
 
-                    <label htmlFor="password" className=" block text-sm font-medium text-accent mb-2">Password</label>
+                    <label htmlFor="password" className="block text-sm font-medium mb-2">Password</label>
                     <input
                         type="password"
                         id="password"
@@ -93,7 +93,7 @@ export default function LoginPage() {
                         </button>
 
                         <div className="text-center">
-                            <a href="/signup" className="text-text text-opacity-60 font-md text-sm hover:text-text transition-all duration-150">Don't have an account? Sign Up</a>
+                            <a href="/signup" className="text-text text-opacity-60 font-md text-sm hover:text-text transition-all duration-150">Don't have an account? <span className="hover:text-accent"> Sign Up </span></a>
                         </div>
                     </div>
                 </div>

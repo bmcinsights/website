@@ -25,10 +25,10 @@ const Navbar = () => {
       name: "Contact Us",
       path: "/contact",
     },
-  ]
+  ];
 
   return (
-    <header className="bg-gray-200 dark:bg-gray-900 text-white shadow-md z-10 relative">
+    <header className="bg-gray-200 dark:bg-gray-900 text-text dark:text-white shadow-md z-10 relative">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo Section */}
         <div className="logo">
@@ -50,10 +50,10 @@ const Navbar = () => {
           {isMenuOpen ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
+              className="h-8 w-8 text-black dark:text-white" // Adjusted color based on theme
               fill="none"
               viewBox="0 0 24 24"
-              stroke="white"
+              stroke="currentColor"
               strokeWidth={2}
             >
               <path
@@ -65,10 +65,10 @@ const Navbar = () => {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
+              className="h-8 w-8 text-black dark:text-white" // Adjusted color based on theme
               fill="none"
               viewBox="0 0 24 24"
-              stroke="white"
+              stroke="currentColor"
               strokeWidth={2}
             >
               <path
@@ -84,39 +84,38 @@ const Navbar = () => {
         <nav
           className={`absolute md:relative top-16 md:top-auto left-0 w-full bg-gray-900 md:bg-transparent z-20 md:z-auto md:flex items-center justify-end md:space-x-2 transition duration-300 ${
             isMenuOpen ? "block" : "hidden"
-          } ${isMenuOpen ? "bg-[#1f2937]" : ""}`}
+          } ${isMenuOpen ? "bg-background" : ""}`}
         >
+          {navLinks.map((links, index) => {
+            return (
+              <a
+                href={links.path}
+                key={index}
+                className={`block font-medium hover:text-opacity-80 py-2 px-4 md:py-0 text-lg transition duration-300 ${
+                  pathname === links.path
+                    ? "underline decoration-primary solid decoration-[3px] transition-none" // Disable transition for active link
+                    : "text-text dark:text-white"
+                }`}
+              >
+                {links.name}
+              </a>
+            );
+          })}
 
-          {
-            navLinks.map((links, index) => {
-              return (
-                <a
-                  href={links.path}
-                  className={`block font-medium text-text hover:text-opacity-80 py-2 px-4 md:py-0 text-lg transition duration-300 ${
-                    pathname === links.path
-                      ? "underline decoration-primary solid decoration-[3px]"
-                      : ""
-                  }`}
-                >
-                  {links.name}
-                </a>
-              )
-            })
-          }
-          
           {/* Conditional Threads Link */}
           {isLoggedIn && (
             <a
               href="/threads"
-              className={`block font-medium text-text hover:text-opacity-60 py-2 px-4 md:py-0 text-lg transition duration-300 ${
+              className={`block font-medium hover:text-opacity-60 py-2 px-4 md:py-0 text-lg transition duration-300 ${
                 pathname.startsWith("/threads")
-                  ? "underline decoration-primary decoration-solid decoration-[3px]"
-                  : ""
+                  ? "underline decoration-primary decoration-solid decoration-[3px] transition-none" // Disable transition for active link
+                  : "text-text dark:text-white"
               }`}
             >
               Threads
             </a>
           )}
+
           {/* Conditional Login/Dashboard Button */}
           <a
             href={isLoggedIn ? "/profile" : "/webLogin"}
@@ -132,14 +131,15 @@ const Navbar = () => {
           >
             {isLoggedIn ? "Dashboard" : "Login"}
           </a>
+
           {/* Conditional Settings Link */}
           {isLoggedIn && (
             <a
               href="/userprofile"
-              className={`block font-medium text-text hover:text-white py-2 px-4 md:py-0 text-lg transition duration-300 ${
+              className={`block font-medium hover:text-white py-2 px-4 md:py-0 text-lg transition duration-300 ${
                 pathname === "/userprofile"
                   ? "underline decoration-sky-500 decoration-solid decoration-[3px] md:no-underline"
-                  : ""
+                  : "text-text dark:text-white"
               }`}
             >
               <i className="fas fa-cog hidden md:block"></i>{" "}

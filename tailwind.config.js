@@ -27,11 +27,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#2366a9",
-        secondary: "#1587c5",
-        background: "#ffffff",
-        accent: "#bc3d58",
-        text: "#000000",
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        background: 'var(--background)',
+        accent: 'var(--accent)',
+        text: 'var(--text)',
       },
       fontFamily: {
         // Override the default sans font with Acumin Pro

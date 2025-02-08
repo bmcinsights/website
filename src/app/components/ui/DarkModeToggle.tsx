@@ -23,7 +23,7 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      className="fixed bottom-6 right-6 p-3 w-12 h-12 bg-gray-800 text-white rounded-full shadow-lg transition transform hover:scale-105 focus:outline-none"
+      className="fixed bottom-6 right-6 p-3 w-12 h-12 bg-gray-800 text-white rounded-full shadow-lg transition transform hover:scale-105 focus:outline-none z-50"
     >
       <i
         className={`fa-solid ${
