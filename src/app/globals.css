@@ -12,23 +12,25 @@
     --primary: #2e358f; /* For buttons, links and highlights */
     --secondary: #1587c5; /* Secondary Accents */
     --accent: #f15376; /* For error messages, alerts, etc */
+    /* For opacity support on secondary */
+    --secondary-rgb: 21, 135, 197;
   }
   .dark {
     --text: #ffffff;
-    --background: #000000; /* Same stuffs as above */
+    --background: #000000;
     --primary: #5699dc;
-    --secondary: #77d0e2;
+    /* Updated dark secondary to a more muted tone */
+    --secondary: #4f7cac;
     --accent: #bc3d58;
+    --secondary-rgb: 79, 124, 172; /* 4f=79, 7c=124, ac=172 */
   }
 
-  /* Ensure Tailwind uses these variables dynamically */
   body {
     color: var(--text);
     background-color: var(--background);
   }
 }
 
-/* Apply the variables to Tailwind utility classes */
 @layer utilities {
   .text-text {
     color: var(--text);
@@ -39,10 +41,11 @@
   .bg-primary {
     background-color: var(--primary);
   }
-  .bg-secondary {
-    background-color: var(--secondary);
-  }
   .bg-accent {
     background-color: var(--accent);
+  }
+  /* For cases where you still want to use bg-secondary with opacity */
+  .bg-secondary {
+    background-color: rgba(var(--secondary-rgb), var(--tw-bg-opacity, 1));
   }
 }

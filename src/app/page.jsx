@@ -74,7 +74,7 @@ const Page = () => {
           </a>
         </div>
       </section>
-      
+
       {/* Upcoming Events */}
       <section className="py-8 mt-16 px-6 md:px-12">
         <div className="max-w-6xl mx-auto text-center">
@@ -82,50 +82,67 @@ const Page = () => {
             Upcoming Events
           </h2>
           <p className="text-lg sm:text-xl md:text-xl text-text text-opacity-80 mb-8 leading-relaxed">
-            Stay updated with the latest events happening at British Model College.
+            Stay updated with the latest events happening at British Model
+            College.
           </p>
+
+          {/* Event Cards */}
           <div className="grid gap-10 md:grid-cols-3">
-            <div className="bg-secondary bg-opacity-30 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-              <img
-                src="/images/mun.jpg"
-                alt="BMC MUN 9.0"
-                className="w-full h-[256px] sm:h-56 md:h-64 object-cover rounded-md mb-4"
-              />
-              <h3 className="text-xl font-bold text-text mb-2">
-                <a href="#">BMC MUN 9.0</a>
-              </h3>
-              {/* Changed from text-accent to text-primary */}
-              <p className="text-primary font-medium">Feb 7-9, 2025</p>
+            {/* Event Card 1 */}
+            <div className="rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 bg-gray-200 dark:bg-gray-900">
+              <div className="w-full">
+                <img
+                  src="/images/mun.jpg"
+                  alt="BMC MUN 9.0"
+                  className="w-full h-[256px] sm:h-56 md:h-64 object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-text mb-2">
+                  <a href="#">BMC MUN 9.0</a>
+                </h3>
+                <p className="text-primary dark:text-secondary font-medium">Feb 7-9, 2025</p>
+              </div>
             </div>
-            <div className="bg-secondary bg-opacity-30 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-              <iframe
-                width="100%"
-                height="258"
-                src="https://www.youtube.com/embed/Z3AZCZSdrSg?=0&autoplay=1&mute=1&loop=1&playlist=Z3AZCZSdrSg"
-                title="BMC Sports Week 2024 Highlights"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="w-full mb-4 rounded-md"
-              ></iframe>
-              <h3 className="text-xl font-bold text-text mb-2">
-                <a href="#">BMC Annual Sports Meet 2025</a>
-              </h3>
-              {/* Changed from text-accent to text-primary */}
-              <p className="text-primary font-medium">Feb 23 - 28, 2025</p>
+
+            {/* Event Card 2 */}
+            <div className="rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 bg-gray-200 dark:bg-gray-900">
+              <div className="w-full">
+                <iframe
+                  width="100%"
+                  height="258"
+                  src="https://www.youtube.com/embed/Z3AZCZSdrSg?=0&autoplay=1&mute=1&loop=1&playlist=Z3AZCZSdrSg"
+                  title="BMC Sports Week 2024 Highlights"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="w-full"
+                ></iframe>
+              </div>
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-text mb-2">
+                  <a href="#">BMC Annual Sports Meet 2025</a>
+                </h3>
+                <p className="text-primary dark:text-secondary font-medium">Feb 23 - 28, 2025</p>
+              </div>
             </div>
-            <div className="bg-secondary bg-opacity-30 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-              <img
-                src="/images/bmcfiesta.jpg"
-                alt="BMC Fiesta"
-                className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-md mb-4"
-              />
-              <h3 className="text-xl font-bold text-text mb-2">
-                <a href="#">BMC Fiesta</a>
-              </h3>
-              {/* Changed from text-accent to text-primary */}
-              <p className="text-primary font-medium">Feb 22, 2025</p>
+
+            {/* Event Card 3 */}
+            <div className="rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 bg-gray-200 dark:bg-gray-900">
+              <div className="w-full">
+                <img
+                  src="/images/bmcfiesta.jpg"
+                  alt="BMC Fiesta"
+                  className="w-full h-[256px] sm:h-56 md:h-64 object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-text mb-2">
+                  <a href="#">BMC Fiesta</a>
+                </h3>
+                <p className="text-primary dark:text-secondary font-medium">Feb 22, 2025</p>
+              </div>
             </div>
           </div>
         </div>
@@ -137,23 +154,26 @@ const Page = () => {
           <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-text">
             Featured
           </h2>
-          <div className="bg-secondary bg-opacity-20 rounded-xl p-8 text-text text-start shadow-lg transition duration-300">
-            <div>
+          <div className="rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+            <div className="w-full">
               <img
                 src="/images/alevels.jpg"
                 alt="Featured"
-                className="w-full h-64 object-cover rounded-md mb-4"
+                className="w-full h-64 object-cover"
               />
             </div>
-            <a href="/blog/posts/bmcalevels">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-text">
-                A-Levels in Nepal: An Insider's Guide from a BMC Student
-              </h2>
-            </a>
-            <p className="text-lg sm:text-xl">
-              Hey there! Let me guess - you've just finished SEE and everyone's
-              throwing advice at you about what to do next. "+2 is safer!..."
-            </p>
+            <div className="p-8 bg-gray-200 dark:bg-gray-900 text-text text-start">
+              <a href="/blog/posts/bmcalevels">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+                  A-Levels in Nepal: An Insider's Guide from a BMC Student
+                </h2>
+              </a>
+              <p className="text-lg sm:text-xl">
+                Hey there! Let me guess - you've just finished SEE and
+                everyone's throwing advice at you about what to do next. "+2 is
+                safer!..."
+              </p>
+            </div>
           </div>
         </div>
       </section>
