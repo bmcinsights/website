@@ -66,4 +66,5 @@
   .bg-background {
     background-color: rgba(var(--background-rgb), var(--tw-bg-opacity, 1));
   }
+
 }

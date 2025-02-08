@@ -90,7 +90,7 @@ const ImageUpload = () => {
         </h1>
       </div>
 
-      <div className="bg-secondary bg-opacity-30 dark:bg-opacity-30 rounded-2xl p-8 sm:p-10 lg:p-12 shadow-lg">
+      <div className="bg-secondary bg-opacity-30 dark:bg-opacity-30 rounded-2xl p-8 md:p-12 shadow-lg">
         <div className="my-8">
           <div className="relative grid w-full h-96 rounded-2xl mb-12 place-items-center bg-background dark:bg-black">
             {imageUrl ? (
@@ -113,19 +113,19 @@ const ImageUpload = () => {
 
           <form className="space-y-6">
             <div className="mb-4">
-              <Label className="block text-sm font-medium mb-2">
+              <Label className="block text-sm md:text-base font-medium mb-2">
                 Thread Title
               </Label>
               <Input
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="Enter Thread Title"
-                className="w-full p-3 rounded-lg bg-background text-text placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary focus:outline-none"
+                className="w-full p-3 rounded-lg bg-background dark:bg-background text-text placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary focus:outline-none text-sm md:text-base placeholder-sm md:placeholder-md"
               />
             </div>
 
             <div className="mb-6">
-              <Label className="block text-sm font-medium mb-2">
+              <Label className="block text-sm md:text-base font-medium mb-2">
                 Thread Body
               </Label>
               <textarea
@@ -133,7 +133,7 @@ const ImageUpload = () => {
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Enter Thread Body"
                 rows={8}
-                className="w-full p-3 rounded-lg bg-background text-text placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary focus:outline-none resize-none"
+                className="w-full p-3 rounded-lg bg-background text-text placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary focus:outline-none resize-none text-sm md:text-base placeholder-sm md:placeholder-md"
               />
             </div>
 
@@ -144,7 +144,7 @@ const ImageUpload = () => {
                   handleSubmit();
                 }}
                 disabled={!!(imageUrl && !uploadComplete)}
-                className="w-full py-3 bg-primary hover:bg-primary/70 dark:bg-primary dark:hover:bg-primary/70 text-background font-medium rounded-lg transition hover:bg-opacity-75 focus:ring-2 focus:ring-primary focus:outline-none"
+                className="w-full py-3 md:py-4 bg-primary hover:bg-primary/70 dark:bg-primary dark:hover:bg-primary/70 text-background font-medium text-sm md:text-base rounded-lg transition hover:bg-opacity-75 focus:ring-2 focus:ring-primary focus:outline-none"
               >
                 Create Thread
               </Button>
