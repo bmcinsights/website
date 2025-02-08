@@ -2,17 +2,6 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function SignupPage() {
@@ -75,77 +64,82 @@ export default function SignupPage() {
   }, [user]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="w-full max-w-md p-8 bg-secondary bg-opacity-10 border border-secondary rounded-xl shadow-2xl">
-        <div className="space-y-6">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold text-accent mb-2 font-tertiary">
-              Create Account
-            </h1>
-            <p className="text-gray-400 text-sm">Join our community today</p>
-          </div>
+    <div className="relative flex min-h-screen text-text">
+      {/* Fire particles container */}
+      <div className="fire-container">
+        {[...Array(50)].map((_, i) => (
+          <div key={i} className="fire-particle" style={{ '--i': i } as React.CSSProperties}></div>
+        ))}
+      </div>
 
-          <form className="space-y-5">
+      {/* Right Side - Form */}
+      <div className="w-full flex items-center justify-center relative z-5 py-10 px-6 md:p-16">
+        <div className="w-full max-w-md p-8 bg-secondary bg-opacity-10 border border-secondary py-10 px-8 rounded-xl shadow-lg">
+          <h1 className="text-4xl font-bold font-tertiary text-center mb-6">
+            {loading ? <LoadingSpinner /> : "Create Account"}
+          </h1>
+
+          {errorMessage && (
+            <div className="bg-red-500 text-white text-center p-3 rounded mb-6">
+              {errorMessage}
+            </div>
+          )}
+
+          <form className="space-y-6">
             <div>
-              <label className="text-sm font-medium text-accent block mb-2">
+              <label className="text-sm font-medium text-text block mb-2">
                 Username
               </label>
               <input
                 type="text"
                 onChange={(e) => setUser({ ...user, username: e.target.value })}
                 value={user.username}
-                className="w-full p-3 bg-secondary bg-opacity-20 border border-secondary rounded-lg focus:ring-2 focus:ring-blue-500 text-text"
+                className="w-full p-3 bg-secondary bg-opacity-20 border border-secondary rounded-lg focus:ring-2 focus:ring-primary text-text"
                 placeholder="Enter username"
               />
             </div>
 
             <div>
-              <label className="text-sm font-medium text-accent block mb-2">
+              <label className="text-sm font-medium text-text block mb-2">
                 Email
               </label>
               <input
                 type="email"
                 onChange={(e) => setUser({ ...user, email: e.target.value })}
                 value={user.email}
-                className="w-full p-3 bg-secondary bg-opacity-20 border border-secondary rounded-lg focus:ring-2 focus:ring-blue-500 text-text"
+                className="w-full p-3 bg-secondary bg-opacity-20 border border-secondary rounded-lg focus:ring-2 focus:ring-primary text-text"
                 placeholder="name@britishmodelcollege.edu.np"
               />
             </div>
 
             <div>
-              <label className="text-sm font-medium text-accent block mb-2">
+              <label className="text-sm font-medium text-text block mb-2">
                 Password
               </label>
               <input
                 type="password"
                 onChange={(e) => setUser({ ...user, password: e.target.value })}
                 value={user.password}
-                className="w-full p-3 bg-secondary bg-opacity-20 border border-secondary rounded-lg focus:ring-2 focus:ring-blue-500 text-text"
+                className="w-full p-3 bg-secondary bg-opacity-20 border border-secondary rounded-lg focus:ring-2 focus:ring-primary text-text"
                 placeholder="••••••••"
               />
             </div>
 
-            {errorMessage && (
-              <div className="text-red-500 text-sm p-2 bg-red-500/10 rounded">
-                {errorMessage}
-              </div>
-            )}
-
             <button
               onClick={onSignup}
               disabled={buttonDisabled || loading}
-              className="w-full py-3 bg-primary text-white rounded-lg hover:bg-opacity-60 font-bold rounded-lg transition-colors duration-200 disabled:bg-text disabled:bg-opacity-30"
+              className="w-full py-3 bg-primary text-white rounded-lg hover:bg-opacity-60 font-bold transition-colors duration-150"
             >
               {loading ? <LoadingSpinner /> : "Sign Up"}
             </button>
           </form>
 
-          <div className="text-center">
+          <div className="text-center mt-6">
             <Link
               href="/webLogin"
-              className="text-sm text-text text-opacity-60 hover:text-text transition-colors duration-200"
+              className="text-text text-opacity-60 font-md text-sm hover:text-text transition-all duration-150"
             >
-              Already have an account? Sign in
+              Already have an account? <span className="hover:text-accent">Sign in</span>
             </Link>
           </div>
         </div>

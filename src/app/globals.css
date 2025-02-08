@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://use.typekit.net/hjq1ell.css");
 
 @layer base {
@@ -13,7 +13,9 @@
     --secondary: #1587c5; /* Secondary Accents */
     --accent: #f15376; /* For error messages, alerts, etc */
     /* For opacity support on secondary */
+    --primary-rgb: 46, 53, 143;
     --secondary-rgb: 21, 135, 197;
+    --accent-rgb: 241, 83, 118;
   }
   .dark {
     --text: #ffffff;
@@ -22,7 +24,9 @@
     /* Updated dark secondary to a more muted tone */
     --secondary: #4f7cac;
     --accent: #bc3d58;
+    --primary-rgb: 86, 153, 220; /* 56=86, 99=153, dc=220 */
     --secondary-rgb: 79, 124, 172; /* 4f=79, 7c=124, ac=172 */
+    --accent-rgb: 188, 61, 88; /* bc=188, 3d=61, 58=88 */
   }
 
   body {
@@ -44,8 +48,16 @@
   .bg-accent {
     background-color: var(--accent);
   }
-  /* For cases where you still want to use bg-secondary with opacity */
+  /* For cases where you want to use bg with opacity */
   .bg-secondary {
     background-color: rgba(var(--secondary-rgb), var(--tw-bg-opacity, 1));
+  }
+
+  .bg-accent {
+    background-color: rgba(var(--accent-rgb), var(--tw-bg-opacity, 1));
+  }
+
+  .bg-primary {
+    background-color: rgba(var(--primary-rgb), var(--tw-bg-opacity, 1));
   }
 }

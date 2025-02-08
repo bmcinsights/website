@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-[#00adef] dark:bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
@@ -15,6 +15,7 @@ const Footer = () => {
                 href="https://maps.app.goo.gl/BkpHP1KTAGUQBCGR9"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="hover:text-gray-300 transition"
               >
                 British Model College, Chakuphat
               </a>
@@ -61,7 +62,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-secondary mt-8 pt-8 text-sm text-center">
+        <div className="border-t border-secondary dark:border-gray-700 mt-8 pt-8 text-sm text-center">
           <p>
             &copy; {new Date().getFullYear()} The BMC Insights. All rights
             reserved.
@@ -73,4 +74,3 @@ const Footer = () => {
 };
 
 export default Footer;
-    
