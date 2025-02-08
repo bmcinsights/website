@@ -8,7 +8,9 @@ const ContactUs = () => {
   if (state.succeeded) {
     return (
       <div className="flex flex-col items-center justify-center h-screen px-4 sm:px-6 lg:px-8 text-text md:my-8">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center text-primary">Thank You!</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center text-primary">
+          Thank You!
+        </h1>
         <p className="text-lg sm:text-xl text-center font-medium">
           Your message has been sent successfully. We will get back to you soon.
         </p>
@@ -18,17 +20,9 @@ const ContactUs = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen px-4 sm:px-6 lg:px-8 text-text md:my-4">
-      <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center text-primary">Contact Us</h1>
-      <p className="text-lg sm:text-xl mb-8 text-center font-medium">
-        Either mail us at {" "}
-        <a
-          href="mailto:theinsights@britishmodelcollege.edu.np"
-          className="text-accent hover:underline"
-        >
-          theinsights@britishmodelcollege.edu.np
-        </a>{" "}
-        or fill up the form below.
-      </p>
+      <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center text-primary">
+        Contact Us
+      </h1>
 
       <form
         onSubmit={handleSubmit}
@@ -75,7 +69,11 @@ const ContactUs = () => {
             required
             className="w-full p-3 rounded-lg bg-background text-text placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary focus:outline-none"
           ></textarea>
-          <ValidationError prefix="Message" field="message" errors={state.errors} />
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
         </div>
 
         <button
