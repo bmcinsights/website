@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Blog() {
   return (
-    <section className="container  mx-auto my-12 px-4">
+    <section className="container mx-auto my-12 px-4">
       <div className="mb-8">
         <h1 className="text-center text-4xl md:text-6xl my-4 font-bold text-primary">
           Blogs
@@ -11,7 +11,7 @@ export default function Blog() {
 
       <div className="space-y-8">
         <div className="bg-secondary bg-opacity-30 rounded-xl p-8 text-text text-opacity-60">
-          <a href="/blog/posts/bmcalevels" className="">
+          <a href="/blog/posts/bmcalevels">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-text">
               A-Levels in Nepal: An Insider's Guide from a BMC Student
             </h2>
@@ -28,7 +28,7 @@ export default function Blog() {
           </p>
         </div>
         <div className="bg-secondary bg-opacity-30 rounded-xl p-8 text-text text-opacity-60">
-          <a href="/blog/posts/floods" className="">
+          <a href="/blog/posts/floods">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-text">
               Floods - Monsoon Season in Nepal
             </h2>
@@ -43,7 +43,7 @@ export default function Blog() {
           </p>
         </div>
         <div className="bg-secondary bg-opacity-30 rounded-xl p-8 text-text text-opacity-60">
-          <a href="/blog/posts/freshers" className="">
+          <a href="/blog/posts/freshers">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-text">
               Freshers Party 2024
             </h2>
