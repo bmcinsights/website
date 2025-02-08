@@ -78,25 +78,26 @@ const Page = () => {
       {/* Upcoming Events */}
       <section className="py-8 mt-16 px-6 md:px-12">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className=" text-3xl sm:text-4xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mb-6">
             Upcoming Events
           </h2>
           <p className="text-lg sm:text-xl md:text-xl text-text text-opacity-80 mb-8 leading-relaxed">
             Stay updated with the latest events happening at British Model College.
           </p>
           <div className="grid gap-10 md:grid-cols-3">
-            <div className="bg-secondary bg-opacity-30 p-6 rounded-xl shadow-lg">
+            <div className="bg-secondary bg-opacity-30 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
               <img
                 src="/images/mun.jpg"
-                alt="Event Two"
+                alt="BMC MUN 9.0"
                 className="w-full h-[256px] sm:h-56 md:h-64 object-cover rounded-md mb-4"
               />
               <h3 className="text-xl font-bold text-text mb-2">
                 <a href="#">BMC MUN 9.0</a>
               </h3>
-              <p className="text-accent font-medium">Feb 7-9, 2025</p>
+              {/* Changed from text-accent to text-primary */}
+              <p className="text-primary font-medium">Feb 7-9, 2025</p>
             </div>
-            <div className="bg-secondary bg-opacity-30 p-6 rounded-xl shadow-lg">
+            <div className="bg-secondary bg-opacity-30 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
               <iframe
                 width="100%"
                 height="258"
@@ -111,19 +112,20 @@ const Page = () => {
               <h3 className="text-xl font-bold text-text mb-2">
                 <a href="#">BMC Annual Sports Meet 2025</a>
               </h3>
-              <p className="text-accent font-medium">Feb 23 - 28, 2025</p>
+              {/* Changed from text-accent to text-primary */}
+              <p className="text-primary font-medium">Feb 23 - 28, 2025</p>
             </div>
-
-            <div className="bg-secondary bg-opacity-30 p-6 rounded-xl shadow-lg">
+            <div className="bg-secondary bg-opacity-30 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
               <img
                 src="/images/bmcfiesta.jpg"
-                alt="Event Three"
+                alt="BMC Fiesta"
                 className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-md mb-4"
               />
               <h3 className="text-xl font-bold text-text mb-2">
                 <a href="#">BMC Fiesta</a>
               </h3>
-              <p className="text-accent font-medium">Feb 22, 2025</p>
+              {/* Changed from text-accent to text-primary */}
+              <p className="text-primary font-medium">Feb 22, 2025</p>
             </div>
           </div>
         </div>
@@ -132,18 +134,18 @@ const Page = () => {
       {/* Featured */}
       <section className="py-24 px-6 md:px-12 mt-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className=" text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-text">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-text">
             Featured
           </h2>
-          <div className="bg-secondary bg-opacity-30 rounded-xl p-8 text-text text-start">
+          <div className="bg-secondary bg-opacity-20 rounded-xl p-8 text-text text-start shadow-lg transition duration-300">
             <div>
               <img
                 src="/images/alevels.jpg"
                 alt="Featured"
-                className="w-full h-64 object-contain md:object-cover rounded-md mb-4"
+                className="w-full h-64 object-cover rounded-md mb-4"
               />
             </div>
-            <a href="/blog/posts/bmcalevels" className="">
+            <a href="/blog/posts/bmcalevels">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-text">
                 A-Levels in Nepal: An Insider's Guide from a BMC Student
               </h2>

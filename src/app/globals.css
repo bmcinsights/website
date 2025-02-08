@@ -9,16 +9,16 @@
   :root {
     --text: #000000;
     --background: #ffffff;
-    --primary: #2366a9;
-    --secondary: #1588c6;
-    --accent: #bd3d59;
+    --primary: #2e358f; /* For buttons, links and highlights */
+    --secondary: #1587c5; /* Secondary Accents */
+    --accent: #f15376; /* For error messages, alerts, etc */
   }
   .dark {
     --text: #ffffff;
-    --background: #000000;
+    --background: #000000; /* Same stuffs as above */
     --primary: #5699dc;
-    --secondary: #39acea;
-    --accent: #c2425e;
+    --secondary: #77d0e2;
+    --accent: #bc3d58;
   }
 
   /* Ensure Tailwind uses these variables dynamically */
