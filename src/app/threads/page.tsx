@@ -23,11 +23,13 @@ export default function News() {
   const [newsData, setNewsData] = useState<News[]>([]);
   const [selectedNews, setSelectedNews] = useState<string | null>(null);
   const [likedPosts, setLikedPosts] = useState<Set<string>>(new Set());
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     async function fetchData() {
       const data = await getData();
       setNewsData(data);
+      setLoading(false); // Set loading to false once data is fetched
     }
     fetchData();
   }, []);
@@ -50,7 +52,7 @@ export default function News() {
   };
 
   return (
-    <section className="container mx-auto my-12 px-4">
+    <section className="container mx-auto my-12 px-4 min-h-screen flex flex-col">
       <div className="mb-8">
         <h1 className="text-center text-4xl md:text-6xl my-4 font-bold text-primary">
           Threads
@@ -65,58 +67,69 @@ export default function News() {
         </Link>
       </div>
 
-      <div className="space-y-8">
-        {newsData.map((news) => (
-          <div
-            key={news._id}
-            onClick={() => handleClick(news)}
-            className={`bg-secondary bg-opacity-30 rounded-xl p-8 text-text cursor-pointer transition-all ${
-              selectedNews === news._id
-                ? "transform scale-[1.02]"
-                : "hover:scale-[1.02]"
-            }`}
-          >
-            <div className="flex flex-col sm:flex-row gap-6 lg:gap-8">
-              <div className="w-full sm:w-1/3 h-48 sm:h-64 overflow-hidden rounded-lg">
-                <img 
-                  className="w-full h-full object-cover rounded-lg" 
-                  alt={news.title}
-                  src={news.imageUrl}
-                />
-              </div>
+      {/* Loading Spinner or Text */}
+      {loading ? (
+        <div className="flex justify-center items-center py-10 flex-grow">
+          <div className="spinner-border animate-spin inline-block w-16 h-16 border-4 border-solid rounded-full border-primary border-t-transparent" role="status">
+            <span className="sr-only">Loading...</span>
+          </div>
+        </div>
+      ) : (
+        <div className="space-y-8 flex-grow">
+          {newsData.map((news) => (
+            <div
+              key={news._id}
+              onClick={() => handleClick(news)}
+              className={`bg-secondary bg-opacity-30 rounded-xl p-8 text-text cursor-pointer transition-all ${
+                selectedNews === news._id
+                  ? "transform scale-[1.02]"
+                  : "hover:scale-[1.02]"
+              }`}
+            >
+              <div className="flex flex-col sm:flex-row gap-6 lg:gap-8">
+                <div className="w-full sm:w-1/3 h-48 sm:h-64 overflow-hidden rounded-lg">
+                  <img
+                    className="w-full h-full object-cover rounded-lg"
+                    alt={news.title}
+                    src={news.imageUrl}
+                  />
+                </div>
 
-              <div className="w-full sm:w-2/3 space-y-4">
-                <h2 className="text-2xl sm:text-3xl font-bold text-text">
-                  {news.title}
-                </h2>
-                <p className={`text-lg sm:text-xl text-text text-opacity-60 ${
-                  selectedNews === news._id ? "" : "line-clamp-4"
-                }`}>
-                  {news.text}
-                </p>
-
-                <div className="flex justify-between items-center text-text text-opacity-60 mt-4">
-                  <div>
-                    <div className="font-medium">{news.username}</div>
-                    <div className="opacity-60">Date Added</div>
-                  </div>
-
-                  <div
-                    className="flex items-center cursor-pointer"
-                    onClick={(event) => toggleLike(news._id, event)}
+                <div className="w-full sm:w-2/3 space-y-4">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-text">
+                    {news.title}
+                  </h2>
+                  <p
+                    className={`text-lg sm:text-xl text-text text-opacity-60 ${
+                      selectedNews === news._id ? "" : "line-clamp-4"
+                    }`}
                   >
-                    {likedPosts.has(news._id) ? (
-                      <Heart className="text-accent" />
-                    ) : (
-                      <HeartOutline className="text-text text-opacity-60" />
-                    )}
+                    {news.text}
+                  </p>
+
+                  <div className="flex justify-between items-center text-text text-opacity-60 mt-4">
+                    <div>
+                      <div className="font-medium">{news.username}</div>
+                      <div className="opacity-60">Date Added</div>
+                    </div>
+
+                    <div
+                      className="flex items-center cursor-pointer"
+                      onClick={(event) => toggleLike(news._id, event)}
+                    >
+                      {likedPosts.has(news._id) ? (
+                        <Heart className="text-accent" />
+                      ) : (
+                        <HeartOutline className="text-text text-opacity-60" />
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 }

@@ -44,8 +44,8 @@ const ProfilePage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#010a11] text-white">
-      <div className="bg-[#111827] shadow-md rounded-lg p-6 w-full max-w-md">
+    <div className="flex flex-col items-center justify-center min-h-screen text-text px-4 md:px-0">
+      <div className="bg-gray-200 dark:bg-gray-900 shadow-md rounded-lg p-6 w-full max-w-lg sm:max-w-md md:max-w-lg lg:max-w-2xl">
         {/* User Image */}
         <div className="flex justify-center">
           <img
@@ -57,21 +57,21 @@ const ProfilePage = () => {
 
         {/* User Information */}
         <div className="text-center mt-4">
-          <h1 className="text-2xl font-bold text-white">{user.username}</h1>
-          <p className="text-gray-400">{user.email}</p>
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-text">{user.username}</h1>
+          <p className="text-text text-sm sm:text-base md:text-lg">{user.email}</p>
         </div>
 
         {/* Profile Details */}
         <div className="mt-6 space-y-4">
           <div className="flex justify-between items-center">
-            <span className="text-gray-400">Username:</span>
-            <span className="font-semibold text-white">{user.username}</span>
+            <span className="text-text text-sm sm:text-base md:text-lg">Username:</span>
+            <span className="font-semibold text-text text-sm sm:text-base md:text-lg">{user.username}</span>
           </div>
         </div>
 
         {/* Edit Profile Button */}
         <div className="mt-6">
-          <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+          <button className="w-full bg-primary hover:bg-primary/70 text-white py-2 px-4 rounded-lg transition duration-200 ease-in-out">
             Edit Profile
           </button>
         </div>
@@ -80,7 +80,7 @@ const ProfilePage = () => {
         <div className="mt-4">
           <button
             onClick={handleLogout}
-            className="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700"
+            className="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition duration-200 ease-in-out"
           >
             Logout
           </button>

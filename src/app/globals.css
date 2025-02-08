@@ -9,10 +9,9 @@
   :root {
     --text: #000000;
     --background: #ffffff;
-    --primary: #2e358f; /* For buttons, links and highlights */
-    --secondary: #1587c5; /* Secondary Accents */
-    --accent: #f15376; /* For error messages, alerts, etc */
-    /* For opacity support on secondary */
+    --primary: #2e358f;
+    --secondary: #1587c5;
+    --accent: #f15376;
     --primary-rgb: 46, 53, 143;
     --secondary-rgb: 21, 135, 197;
     --accent-rgb: 241, 83, 118;
@@ -22,15 +21,19 @@
     --text: #ffffff;
     --background: #000000;
     --primary: #5699dc;
-    /* Updated dark secondary to a more muted tone */
     --secondary: #4f7cac;
     --accent: #bc3d58;
-    --primary-rgb: 86, 153, 220; /* 56=86, 99=153, dc=220 */
-    --secondary-rgb: 79, 124, 172; /* 4f=79, 7c=124, ac=172 */
-    --accent-rgb: 188, 61, 88; /* bc=188, 3d=61, 58=88 */
+    --primary-rgb: 86, 153, 220;
+    --secondary-rgb: 79, 124, 172;
+    --accent-rgb: 188, 61, 88;
     --background-rgb: 0, 0, 0;
   }
 
+  /* Apply smooth transitions on background and text changes */
+  html, body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
   body {
     color: var(--text);
     background-color: var(--background);
@@ -50,21 +53,16 @@
   .bg-accent {
     background-color: var(--accent);
   }
-  /* For cases where you want to use bg with opacity */
   .bg-secondary {
     background-color: rgba(var(--secondary-rgb), var(--tw-bg-opacity, 1));
   }
-
   .bg-accent {
     background-color: rgba(var(--accent-rgb), var(--tw-bg-opacity, 1));
   }
-
   .bg-primary {
     background-color: rgba(var(--primary-rgb), var(--tw-bg-opacity, 1));
   }
-
   .bg-background {
     background-color: rgba(var(--background-rgb), var(--tw-bg-opacity, 1));
   }
-
 }
