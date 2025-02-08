@@ -35,7 +35,7 @@ export default function ProfilePage() {
               duration: 0.5,
               ease: [0.4, 0.0, 0.2, 1],
             }}
-            className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
+            className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-gray-100 max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
           >
             Your ultimate destination for everything happening at our school.
             <br />
@@ -48,11 +48,11 @@ export default function ProfilePage() {
 
       {/* Conditionally render WobbleCards after HeroHighlight animation */}
       {showWobbleCards && (
-        <div className="max-w-full md:mr-3 mx-3">
-          <h1 className="text-3xl md:ml-8 font-bold mb-4 underline decoration-sky-300">
+        <div className="max-w-full md:mb-6">
+          <h1 className="text-3xl text-text md:ml-8 mx-4 font-bold mb-4 underline decoration-sky-300">
             Explore
           </h1>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-svh md:mx-8 mb-4 ">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-svh md:mx-8 mb-4 mx-4 ">
             <WobbleCard
               containerClassName="col-span-1 lg:col-span-2 h-full bg-fuchsia-950 min-h-[350px] sm:min-h-[400px] lg:min-h-[300px]"
               className=""

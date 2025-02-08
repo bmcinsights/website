@@ -1,5 +1,5 @@
-'use client'
-import { UploadButton } from "@/utils/uploadthing"; // Adjust the path as needed
+"use client";
+import { UploadButton } from "@/utils/uploadthing";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Input } from "@/components/ui/input";
@@ -70,7 +70,11 @@ const ImageUpload = () => {
     } catch (error: any) {
       if (axios.isAxiosError(error)) {
         console.error("Axios error:", error.response?.data || error.message);
-        alert(`Error submitting the data: ${error.response?.data?.error || error.message}`);
+        alert(
+          `Error submitting the data: ${
+            error.response?.data?.error || error.message
+          }`
+        );
       } else {
         console.error("Unknown error:", error);
         alert("There was an error submitting the data. Please try again.");
@@ -79,70 +83,76 @@ const ImageUpload = () => {
   };
 
   return (
-    <div>
-      {/* Header moved outside of the section */}
-      <div className="text-center md:text-4xl text-3xl font-bold mt-12 md:mt-20 my-12">
-        <h1 className="font-montserrat text-primary">UPLOAD NEWS</h1>
+    <section className="container mx-auto my-12 px-4 text-text">
+      <div className="mb-8">
+        <h1 className="text-center text-4xl md:text-6xl my-4 font-bold text-primary">
+          Create Thread
+        </h1>
       </div>
 
-      {/* Main section with dark background */}
-      <section className="container mx-auto py-2 sm:my-12 bg-[#010b13] text-white px-4 sm:px-8 rounded-lg">
-        <div className="my-12">
-          <div className="overflow-hidden relative grid w-full h-96 bg-foreground rounded-xl mb-24 place-items-center bg-opacity-25">
-            <img
-              src={imageUrl}
-              alt="Uploaded file preview"
-              className="w-full h-[25rem] object-cover absolute border-gray-500"
-            />
-
-            <UploadButton
-              endpoint="imageUploader"
-              onClientUploadComplete={handleUploadComplete}
-              onUploadError={handleUploadError}
-              className="text-2xl opacity-80 text-white"
-            />
+      <div className="bg-secondary bg-opacity-30 dark:bg-opacity-30 rounded-2xl p-8 sm:p-10 lg:p-12 shadow-lg">
+        <div className="my-8">
+          <div className="relative grid w-full h-96 rounded-2xl mb-12 place-items-center bg-background dark:bg-black">
+            {imageUrl ? (
+              <img
+                src={imageUrl}
+                alt="Uploaded file preview"
+                className="w-full h-full object-cover rounded-2xl"
+              />
+            ) : (
+              <div className="w-full h-full rounded-2xl border-2 border-text border-opacity-20 flex items-center justify-center">
+                <UploadButton
+                  endpoint="imageUploader"
+                  onClientUploadComplete={handleUploadComplete}
+                  onUploadError={handleUploadError}
+                  className="text-text text-opacity-60"
+                />
+              </div>
+            )}
           </div>
 
-          <form>
-            <div className="grid gap-12">
-              <div className="flex flex-col">
-                <Label className="text-lg font-semibold">Thread Title:</Label>
-                <Input
-                  value={title}
-                  onChange={(e) => setTitle(e.target.value)}
-                  placeholder="Enter Thread Title"
-                  className="!bg-transparent border-2 rounded-md p-4 my-4 text-white font-semibold text-lg !border-gray-600" 
-                />
-              </div>
-
-              <div className="flex flex-col">
-                <Label className="text-lg font-semibold">Thread Body:</Label>
-                <textarea
-                  value={text}
-                  onChange={(e) => setText(e.target.value)}
-                  placeholder="Enter Thread Body"
-                  rows={8}
-                  className="bg-inherit border-2 rounded-md p-4 my-4 resize-none text-lg text-white font-medium border-gray-600"
-                />
-              </div>
+          <form className="space-y-6">
+            <div className="mb-4">
+              <Label className="block text-sm font-medium mb-2">
+                Thread Title
+              </Label>
+              <Input
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="Enter Thread Title"
+                className="w-full p-3 rounded-lg bg-background text-text placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary focus:outline-none"
+              />
             </div>
 
-            <div className="container mx-auto my-12">
+            <div className="mb-6">
+              <Label className="block text-sm font-medium mb-2">
+                Thread Body
+              </Label>
+              <textarea
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                placeholder="Enter Thread Body"
+                rows={8}
+                className="w-full p-3 rounded-lg bg-background text-text placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary focus:outline-none resize-none"
+              />
+            </div>
+
+            <div className="pt-2">
               <Button
                 onClick={(e) => {
                   e.preventDefault();
                   handleSubmit();
                 }}
                 disabled={!!(imageUrl && !uploadComplete)}
-                className="w-full py-4 bg-secondary hover:bg-opacity-80 hover:bg-secondary text-lg font-semibold text-black"
+                className="w-full py-3 bg-primary hover:bg-primary/70 dark:bg-primary dark:hover:bg-primary/70 text-background font-medium rounded-lg transition hover:bg-opacity-75 focus:ring-2 focus:ring-primary focus:outline-none"
               >
-                Upload
+                Create Thread
               </Button>
             </div>
           </form>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

@@ -6,7 +6,7 @@ const Page = () => {
       {/* Main Content */}
       <div className="md:flex md:space-x-12 px-6 md:px-8 py-10 md:py-24 items-center md:mx-auto max-w-7xl">
         <div className="md:w-1/2">
-          <h1 className="text-4xl sm:text-5xl md:text-[56px] my-4 font-bold text-text">
+          <h1 className="text-4xl sm:text-5xl md:text-[56px] my-4 font-bold text-primary">
             The BMC Insights
           </h1>
           <p className="text-lg font-medium sm:text-xl md:text-xl text-text text-opacity-80 mb-8 leading-relaxed">
@@ -89,25 +89,7 @@ const Page = () => {
           {/* Event Cards */}
           <div className="grid gap-10 md:grid-cols-3">
             {/* Event Card 1 */}
-            <div className="rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 bg-gray-200 dark:bg-gray-900">
-              <div className="w-full">
-                <img
-                  src="/images/mun.jpg"
-                  alt="BMC MUN 9.0"
-                  className="w-full h-[256px] sm:h-56 md:h-64 object-cover"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="text-xl font-bold text-text mb-2">
-                  <a href="#">BMC MUN 9.0</a>
-                </h3>
-                <p className="text-primary dark:text-secondary font-medium">
-                  Feb 7-9, 2025
-                </p>
-              </div>
-            </div>
 
-            {/* Event Card 2 */}
             <div className="rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 bg-gray-200 dark:bg-gray-900">
               <div className="w-full">
                 <iframe
@@ -132,21 +114,40 @@ const Page = () => {
               </div>
             </div>
 
+            {/* Event Card 2 */}
+            <div className="rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 bg-gray-200 dark:bg-gray-900">
+              <div className="w-full">
+                <img
+                  src="/images/farewell.jpg"
+                  alt="BMC MUN 9.0"
+                  className="w-full h-[256px] sm:h-56 md:h-64 object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-xl font-bold text-text mb-2">
+                  <a href="#">BMC Farewell 2025</a>
+                </h3>
+                <p className="text-primary dark:text-secondary font-medium">
+                  March 12, 2025
+                </p>
+              </div>
+            </div>
+
             {/* Event Card 3 */}
             <div className="rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 bg-gray-200 dark:bg-gray-900">
               <div className="w-full">
                 <img
-                  src="/images/bmcfiesta.jpg"
+                  src="/images/exam.jpg"
                   alt="BMC Fiesta"
                   className="w-full h-[256px] sm:h-56 md:h-64 object-cover"
                 />
               </div>
               <div className="p-4">
                 <h3 className="text-xl font-bold text-text mb-2">
-                  <a href="#">BMC Fiesta</a>
+                  <a href="#">CIE Exam May/June 2025</a>
                 </h3>
                 <p className="text-primary dark:text-secondary font-medium">
-                  Feb 22, 2025
+                April 29 - June 11, 2025
                 </p>
               </div>
             </div>

@@ -87,7 +87,7 @@ export default function LoginPage() {
                         <button
                             onClick={onLogIn}
                             disabled={buttonDisabled}
-                            className="w-full py-3 bg-primary text-white font-bold rounded-lg hover:bg-opacity-60 cursor-pointer transition-colors duration-150 mb-4"
+                            className="w-full py-3 bg-[#ff0000] bg-opacity-60 text-white font-bold rounded-lg hover:bg-opacity-80 cursor-pointer transition-colors duration-150 mb-4"
                         >
                             Log In
                         </button>
