@@ -55,7 +55,7 @@ const Page = () => {
       </div>
 
       {/* Our Activities */}
-      <section className="py-24 px-6 md:px-12 mt-16">
+      <section className="py-24 px-6 md:px-12 mt-16 bg-gray-100 dark:bg-gray-950">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mb-6">
             Our Activities
@@ -101,7 +101,9 @@ const Page = () => {
                 <h3 className="text-xl font-bold text-text mb-2">
                   <a href="#">BMC MUN 9.0</a>
                 </h3>
-                <p className="text-primary dark:text-secondary font-medium">Feb 7-9, 2025</p>
+                <p className="text-primary dark:text-secondary font-medium">
+                  Feb 7-9, 2025
+                </p>
               </div>
             </div>
 
@@ -124,7 +126,9 @@ const Page = () => {
                 <h3 className="text-xl font-bold text-text mb-2">
                   <a href="#">BMC Annual Sports Meet 2025</a>
                 </h3>
-                <p className="text-primary dark:text-secondary font-medium">Feb 23 - 28, 2025</p>
+                <p className="text-primary dark:text-secondary font-medium">
+                  Feb 23 - 28, 2025
+                </p>
               </div>
             </div>
 
@@ -141,7 +145,9 @@ const Page = () => {
                 <h3 className="text-xl font-bold text-text mb-2">
                   <a href="#">BMC Fiesta</a>
                 </h3>
-                <p className="text-primary dark:text-secondary font-medium">Feb 22, 2025</p>
+                <p className="text-primary dark:text-secondary font-medium">
+                  Feb 22, 2025
+                </p>
               </div>
             </div>
           </div>
@@ -149,17 +155,17 @@ const Page = () => {
       </section>
 
       {/* Featured */}
-      <section className="py-24 px-6 md:px-12 mt-16">
+      <section className="py-24 px-6 md:px-12 mt-16 bg-gray-100 dark:bg-gray-950">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-text">
             Featured
           </h2>
           <div className="rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
-            <div className="w-full">
+            <div className="w-full h-64">
               <img
                 src="/images/alevels.jpg"
                 alt="Featured"
-                className="w-full h-64 object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="p-8 bg-gray-200 dark:bg-gray-900 text-text text-start">

@@ -28,7 +28,7 @@ const Navbar = () => {
   ]
 
   return (
-    <header className="bg-background shadow-md z-10 relative">
+    <header className="bg-gray-200 dark:bg-gray-900 text-white shadow-md z-10 relative">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo Section */}
         <div className="logo">
