@@ -128,7 +128,7 @@ export default function SignupPage() {
             <button
               onClick={onSignup}
               disabled={buttonDisabled || loading}
-              className="w-full py-3 bg-primary text-white rounded-lg hover:bg-opacity-60 font-bold transition-colors duration-150"
+              className="w-full py-3 bg-[#ff0000] bg-opacity-60 hover:bg-opacity-80 text-white rounded-lg font-bold transition-colors duration-150"
             >
               {loading ? <LoadingSpinner /> : "Sign Up"}
             </button>
