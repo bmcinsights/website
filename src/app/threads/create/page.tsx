@@ -2,9 +2,7 @@
 import { UploadButton } from "@/utils/uploadthing";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Input } from "@/components/ui/input";
-import { Label } from "@radix-ui/react-label";
-import { Button } from "@/components/ui/button";
+
 
 interface Submission {
   title: string;
@@ -85,7 +83,7 @@ const ImageUpload = () => {
   return (
     <section className="container mx-auto my-12 px-4 text-text">
       <div className="mb-8">
-        <h1 className="text-center text-4xl md:text-6xl my-4 font-bold text-primary">
+        <h1 className="text-center text-4xl md:text-6xl my-4 font-bold text-heading">
           Create Thread
         </h1>
       </div>
@@ -113,10 +111,10 @@ const ImageUpload = () => {
 
           <form className="space-y-6">
             <div className="mb-4">
-              <Label className="block text-sm md:text-base font-medium mb-2">
+              <label className="block text-sm md:text-base font-medium mb-2">
                 Thread Title
-              </Label>
-              <Input
+              </label>
+              <input
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="Enter Thread Title"
@@ -125,9 +123,9 @@ const ImageUpload = () => {
             </div>
 
             <div className="mb-6">
-              <Label className="block text-sm md:text-base font-medium mb-2">
+              <label className="block text-sm md:text-base font-medium mb-2">
                 Thread Body
-              </Label>
+              </label>
               <textarea
                 value={text}
                 onChange={(e) => setText(e.target.value)}
@@ -138,16 +136,16 @@ const ImageUpload = () => {
             </div>
 
             <div className="pt-2">
-              <Button
+              <button
                 onClick={(e) => {
                   e.preventDefault();
                   handleSubmit();
                 }}
                 disabled={!!(imageUrl && !uploadComplete)}
-                className="w-full py-3 md:py-4 bg-primary hover:bg-primary/70 dark:bg-primary dark:hover:bg-primary/70 text-background font-medium text-sm md:text-base rounded-lg transition hover:bg-opacity-75 focus:ring-2 focus:ring-primary focus:outline-none"
+                className="w-full bg-primary bg-opacity-100 hover:bg-sky-400 text-background py-3 rounded-xl"
               >
                 Create Thread
-              </Button>
+              </button>
             </div>
           </form>
         </div>

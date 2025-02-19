@@ -32,6 +32,7 @@ module.exports = {
         background: 'var(--background)',
         accent: 'var(--accent)',
         text: 'var(--text)',
+        heading: 'var(--heading)',
       },
       fontFamily: {
         // Override the default sans font with Acumin Pro

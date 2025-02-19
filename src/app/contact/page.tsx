@@ -20,7 +20,7 @@ const ContactUs = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen px-4 sm:px-6 lg:px-8 text-text md:my-4">
-      <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center text-primary">
+      <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center text-heading">
         Contact Us
       </h1>
 

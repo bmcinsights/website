@@ -6,7 +6,7 @@ const Page = () => {
       {/* Main Content */}
       <div className="md:flex md:space-x-12 px-6 md:px-8 py-10 md:py-24 items-center md:mx-auto max-w-7xl">
         <div className="md:w-1/2">
-          <h1 className="text-4xl sm:text-5xl md:text-[56px] my-4 font-bold text-primary">
+          <h1 className="text-4xl sm:text-5xl md:text-[56px] my-4 font-bold text-heading">
             The BMC Insights
           </h1>
           <p className="text-lg font-medium sm:text-xl md:text-xl text-text text-opacity-80 mb-8 leading-relaxed">
@@ -44,11 +44,11 @@ const Page = () => {
         </div>
         <div className="md:w-2/3 mt-12 md:mt-0 relative">
           <div className="relative w-full h-full">
-            <div className="absolute top-0 left-0 right-0 bottom-0 md:top-10 md:left-10 md:right-10 sm:top-5 sm:left-5 sm:right-5 w-full h-full bg-gradient-to-bl from-secondary to-accent rounded-xl blur-3xl z-0"></div>
+            <div className="absolute top-0 left-0 right-0 bottom-0 md:top-10 md:left-10 md:right-10 sm:top-5 sm:left-5 sm:right-5 w-full h-full"></div>
             <img
               src="/images/bmc.jpg"
               alt="BMC Students"
-              className="relative z-10 rounded-xl object-cover shadow-2xl"
+              className="relative z-10 rounded-xl object-cover"
             />
           </div>
         </div>
@@ -57,7 +57,7 @@ const Page = () => {
       {/* Our Activities */}
       <section className="py-24 px-6 md:px-12 mt-16 bg-gray-100 dark:bg-gray-950">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-heading">
             Our Activities
           </h2>
           <p className="text-lg sm:text-xl md:text-xl text-text text-opacity-80 mb-8 leading-relaxed">
@@ -78,7 +78,7 @@ const Page = () => {
       {/* Upcoming Events */}
       <section className="py-8 mt-16 px-6 md:px-12">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-heading">
             Upcoming Events
           </h2>
           <p className="text-lg sm:text-xl md:text-xl text-text text-opacity-80 mb-8 leading-relaxed">
@@ -158,7 +158,7 @@ const Page = () => {
       {/* Featured */}
       <section className="py-24 px-6 md:px-12 mt-16 bg-gray-100 dark:bg-gray-950">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-text">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mb-6 text-heading">
             Featured
           </h2>
           <div className="rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">

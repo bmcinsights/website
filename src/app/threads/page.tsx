@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { notFound } from "next/navigation";
 import { Heart as HeartOutline, Heart, Upload } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+
 
 interface News {
   _id: string;
@@ -54,17 +54,17 @@ export default function News() {
   return (
     <section className="container mx-auto my-12 px-4 min-h-screen flex flex-col">
       <div className="mb-8">
-        <h1 className="text-center text-4xl md:text-6xl my-4 font-bold text-primary">
+        <h1 className="text-center text-4xl md:text-6xl my-4 font-bold text-heading">
           Threads
         </h1>
       </div>
 
-      <div className="flex justify-start mb-8">
-        <Link href="threads/create">
-          <Button className="bg-primary hover:bg-primary/90 text-background">
-            <Upload className="mr-2" /> Create Thread
-          </Button>
-        </Link>
+      <div className="flex justify-start mb-8" >
+        <a href="threads/create" className="">
+          <button className="bg-primary px-6 py-3 text-background sm:px-8 sm:py-4 sm:text-lg rounded-2xl font-medium text-white shadow-xl transition duration-300 ease-in-out transform whitespace-nowrap">
+          <i className="fa-solid fa-arrow-up-from-bracket"></i> Create Thread
+          </button>
+        </a>
       </div>
 
       {/* Loading Spinner or Text */}

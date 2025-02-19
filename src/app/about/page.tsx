@@ -7,7 +7,7 @@ const AboutPage = () => {
         <div className="space-y-12">
           {/* Header Section */}
           <header className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-primary mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-heading">
               The BMC Insights
             </h1>
             <p className="text-xl text-text opacity-80 max-w-3xl mx-auto">
@@ -18,8 +18,8 @@ const AboutPage = () => {
 
           {/* About Section */}
           <div className="bg-secondary bg-opacity-30 rounded-xl p-8">
-            <h2 className="text-3xl font-bold text-primary mb-6">About Us</h2>
-            <p className="text-text opacity-90 text-xl leading-relaxed">
+            <h2 className="text-3xl font-bold text-heading mb-6">About Us</h2>
+            <p className="text-text text-xl leading-relaxed">
               We are more than just a student publication. BMC Insights is where
               ideas take flight, creativity finds purpose, and students
               transform into thought leaders. As the premier student-led
@@ -32,10 +32,10 @@ const AboutPage = () => {
           {/* Mission Section */}
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-secondary bg-opacity-30 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-primary mb-4">
+              <h3 className="text-2xl font-bold text-heading mb-4">
                 Our Mission
               </h3>
-              <ul className="space-y-4 text-text opacity-90">
+              <ul className="space-y-4 text-text">
                 <li className="flex items-start text-lg">
                   <span className="text-primary mr-2">•</span>
                   Uncover and amplify powerful stories from our campus community
@@ -56,10 +56,10 @@ const AboutPage = () => {
             </div>
 
             <div className="bg-secondary bg-opacity-30 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-primary mb-4">
+              <h3 className="text-2xl font-bold text-heading mb-4">
                 What We Do
               </h3>
-              <ul className="space-y-4 text-text opacity-90">
+              <ul className="space-y-4 text-text">
                 <li className="flex items-start text-lg">
                   <span className="text-primary mr-2">•</span>
                   Craft compelling stories that matter to our community
@@ -82,10 +82,10 @@ const AboutPage = () => {
 
           {/* Contact Section */}
           <div className="text-center bg-secondary bg-opacity-30 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-primary mb-4">
+            <h3 className="text-2xl font-bold text-heading mb-4">
               Get Involved
             </h3>
-            <p className="text-text opacity-90 text-xl mb-6">
+            <p className="text-text text-xl mb-6">
               Interested in becoming a part of The BMC Insights? We're always
               looking for passionate writers, editors, and creative minds!
             </p>

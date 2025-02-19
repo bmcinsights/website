@@ -49,7 +49,7 @@ export default function ProfilePage() {
       {/* Conditionally render WobbleCards after HeroHighlight animation */}
       {showWobbleCards && (
         <div className="max-w-full md:mb-6">
-          <h1 className="text-3xl text-text md:ml-8 mx-4 font-bold mb-4 underline decoration-sky-300">
+          <h1 className="text-3xl md:ml-8 mx-4 font-bold mb-4 text-heading">
             Explore
           </h1>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-svh md:mx-8 mb-4 mx-4 ">

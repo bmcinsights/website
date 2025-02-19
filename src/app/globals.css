@@ -11,11 +11,13 @@
     --background: #ffffff;
     --primary: #2e358f;
     --secondary: #1587c5;
+    --heading: #00aeef;
     --accent: #f15376;
     --primary-rgb: 46, 53, 143;
     --secondary-rgb: 21, 135, 197;
     --accent-rgb: 241, 83, 118;
     --background-rgb: 255, 255, 255;
+    --heading-rgb: 0, 174, 239;
   }
   .dark {
     --text: #ffffff;
