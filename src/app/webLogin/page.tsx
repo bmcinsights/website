@@ -53,7 +53,7 @@ export default function LoginPage() {
             {/* Right Side - Form */}
             <div className="w-full flex items-center justify-center relative z-10 py-10 px-6 md:p-16">
                 <div className="w-full max-w-md p-8 bg-secondary bg-opacity-10 border border-secondary py-10 px-8 rounded-xl shadow-lg">
-                    <h1 className="text-4xl font-bold font-tertiary text-center mb-6">
+                    <h1 className="text-4xl font-bold text-heading text-center mb-6">
                         {loading ? <LoadingSpinner /> : "Log in"}
                     </h1>
 
@@ -70,7 +70,7 @@ export default function LoginPage() {
                         value={user.email}
                         onChange={(e) => setUser({ ...user, email: e.target.value })}
                         placeholder="Email"
-                        className="w-full p-3 mb-6 bg-secondary bg-opacity-20 text-text border border-secondary rounded-lg focus:ring-2 focus:ring-red-500"
+                        className="w-full p-3 mb-6 bg-secondary bg-opacity-20 text-text border border-secondary rounded-lg"
                     />
 
                     <label htmlFor="password" className="block text-sm font-medium mb-2">Password</label>
@@ -80,20 +80,20 @@ export default function LoginPage() {
                         value={user.password}
                         onChange={(e) => setUser({ ...user, password: e.target.value })}
                         placeholder="Password"
-                        className="w-full p-3 mb-6 bg-secondary bg-opacity-20 text-text border border-secondary rounded-lg focus:ring-2 focus:ring-red-500"
+                        className="w-full p-3 mb-6 bg-secondary bg-opacity-20 text-text border border-secondary rounded-lg"
                     />
 
                     <div className="mt-8">
                         <button
                             onClick={onLogIn}
                             disabled={buttonDisabled}
-                            className="w-full py-3 bg-[#ff0000] bg-opacity-60 text-white font-bold rounded-lg hover:bg-opacity-80 cursor-pointer transition-colors duration-150 mb-4"
+                            className="w-full py-3 bg-primary bg-opacity-100 text-white font-bold rounded-lg hover:bg-heading cursor-pointer transition-colors duration-150 mb-4"
                         >
                             Log In
                         </button>
 
                         <div className="text-center">
-                            <a href="/signup" className="text-text text-opacity-60 font-md text-sm hover:text-text transition-all duration-150">Don't have an account? <span className="hover:text-accent"> Sign Up </span></a>
+                            <a href="/signup" className="text-text font-md text-sm hover:text-text transition-all duration-150">Don't have an account? <span className="hover:text-secondary"> Sign Up </span></a>
                         </div>
                     </div>
                 </div>

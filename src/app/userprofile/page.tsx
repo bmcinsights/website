@@ -71,7 +71,7 @@ const ProfilePage = () => {
 
         {/* Edit Profile Button */}
         <div className="mt-6">
-          <button className="w-full bg-primary hover:bg-primary/70 text-white py-2 px-4 rounded-lg transition duration-200 ease-in-out">
+          <button className="w-full bg-primary hover:bg-heading text-white py-2 px-4 rounded-lg transition duration-200 ease-in-out">
             Edit Profile
           </button>
         </div>
@@ -80,7 +80,7 @@ const ProfilePage = () => {
         <div className="mt-4">
           <button
             onClick={handleLogout}
-            className="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition duration-200 ease-in-out"
+            className="w-full bg-primary text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-200 ease-in-out"
           >
             Logout
           </button>

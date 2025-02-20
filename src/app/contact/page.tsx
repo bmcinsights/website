@@ -79,14 +79,14 @@ const ContactUs = () => {
         <button
           type="submit"
           disabled={state.submitting}
-          className="w-full bg-primary text-background font-medium py-3 rounded-lg transition hover:bg-opacity-75 focus:ring-2 focus:ring-primary focus:outline-none"
+          className="w-full bg-primary hover:bg-heading bg-opacity-100 text-background font-medium py-3 rounded-lg transition focus:ring-2 focus:ring-primary focus:outline-none"
         >
           Send Message
         </button>
       </form>
 
       <footer className="mt-12 text-center">
-        <p className="text-muted text-sm dark:text-gray-400">
+        <p className="text-gray-600 text-sm dark:text-gray-400">
           We aim to respond within 24-48 hours. Thank you for reaching out!
         </p>
       </footer>

@@ -95,7 +95,7 @@ const AboutPage = () => {
               rel="noopener noreferrer"
               className="inline-block"
             >
-              <button className="bg-primary hover:bg-opacity-80 text-background px-8 py-3 rounded-xl transition duration-300 transform hover:scale-105">
+              <button className="bg-primary bg-opacity-100 hover:bg-heading text-background px-8 py-3 rounded-xl transition duration-300 transform hover:scale-105">
                 Join Now
               </button>
             </a>

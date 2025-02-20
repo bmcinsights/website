@@ -61,7 +61,7 @@ export default function News() {
 
       <div className="flex justify-start mb-8" >
         <a href="threads/create" className="">
-          <button className="bg-primary px-6 py-3 text-background sm:px-8 sm:py-4 sm:text-lg rounded-2xl font-medium text-white shadow-xl transition duration-300 ease-in-out transform whitespace-nowrap">
+          <button className="bg-primary hover:bg-heading px-6 py-3 text-background sm:px-8 sm:py-4 sm:text-lg rounded-2xl font-medium text-white whitespace-nowrap">
           <i className="fa-solid fa-arrow-up-from-bracket"></i> Create Thread
           </button>
         </a>

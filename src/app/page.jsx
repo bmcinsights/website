@@ -30,7 +30,7 @@ const Page = () => {
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSfXTUhse5GuFSAQgOyEL6VeKFh8NUtRVx7XcnSSgxJgdW7hyw/viewform?usp=dialog"
               target="_blank"
-              className="bg-primary px-6 py-3 text-background sm:px-8 sm:py-4 sm:text-lg rounded-2xl font-medium text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 whitespace-nowrap"
+              className="bg-primary px-6 py-3 text-background sm:px-8 sm:py-4 sm:text-lg rounded-2xl font-medium text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 hover:bg-heading whitespace-nowrap"
             >
               Join the Club
             </a>
@@ -68,7 +68,7 @@ const Page = () => {
           </p>
           <a
             href="/contact"
-            className="bg-primary hover:bg-opacity-80 px-8 py-4 rounded-2xl text-lg font-medium text-white shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+            className="bg-primary hover:bg-heading px-8 py-4 rounded-2xl text-lg font-medium text-white shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
           >
             Get Involved
           </a>

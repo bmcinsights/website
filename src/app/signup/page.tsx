@@ -16,9 +16,9 @@ export default function SignupPage() {
   const [errorMessage, setErrorMessage] = React.useState("");
 
   const validateInput = () => {
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/; // Ensures email ends with @gmail.com
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@britishmodelcollege\.edu\.np$/; // Ensures email ends with @britishmodelcollege.edu.np
     if (!emailRegex.test(user.email)) {
-      setErrorMessage("Email must be a valid @gmail.com address.");
+      setErrorMessage("Email must be a valid @britishmodelcollege.edu.np address.");
       return false;
     }
     if (user.password.length <= 4) {
@@ -68,14 +68,18 @@ export default function SignupPage() {
       {/* Fire particles container */}
       <div className="fire-container">
         {[...Array(50)].map((_, i) => (
-          <div key={i} className="fire-particle" style={{ '--i': i } as React.CSSProperties}></div>
+          <div
+            key={i}
+            className="fire-particle"
+            style={{ "--i": i } as React.CSSProperties}
+          ></div>
         ))}
       </div>
 
       {/* Right Side - Form */}
       <div className="w-full flex items-center justify-center relative z-5 py-10 px-6 md:p-16">
         <div className="w-full max-w-md p-8 bg-secondary bg-opacity-10 border border-secondary py-10 px-8 rounded-xl shadow-lg">
-          <h1 className="text-4xl font-bold font-tertiary text-center mb-6">
+          <h1 className="text-4xl font-bold text-center mb-6 text-heading">
             {loading ? <LoadingSpinner /> : "Create Account"}
           </h1>
 
@@ -128,7 +132,7 @@ export default function SignupPage() {
             <button
               onClick={onSignup}
               disabled={buttonDisabled || loading}
-              className="w-full py-3 bg-[#ff0000] bg-opacity-60 hover:bg-opacity-80 text-white rounded-lg font-bold transition-colors duration-150"
+              className="w-full py-3 bg-primary bg-opacity-100 hover:bg-heading text-white rounded-lg font-bold transition-colors duration-150"
             >
               {loading ? <LoadingSpinner /> : "Sign Up"}
             </button>
@@ -139,7 +143,8 @@ export default function SignupPage() {
               href="/webLogin"
               className="text-text text-opacity-60 font-md text-sm hover:text-text transition-all duration-150"
             >
-              Already have an account? <span className="hover:text-accent">Sign in</span>
+              Already have an account?{" "}
+              <span className="hover:text-secondary">Sign in</span>
             </Link>
           </div>
         </div>

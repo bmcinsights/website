@@ -71,7 +71,7 @@ const Navbar = () => {
                 key={index}
                 className={`block font-medium hover:text-opacity-80 py-2 px-4 md:py-0 text-lg transition duration-300 ${
                   isActive
-                    ? "underline decoration-primary solid decoration-[3px] transition-none"
+                    ? "underline decoration-gray-950 dark:decoration-gray-200 solid decoration-[3px] transition-none"
                     : "text-text dark:text-white"
                 }`}
               >
@@ -86,7 +86,7 @@ const Navbar = () => {
               href="/threads"
               className={`block font-medium hover:text-opacity-60 py-2 px-4 md:py-0 text-lg transition duration-300 ${
                 pathname.startsWith("/threads")
-                  ? "underline decoration-primary decoration-solid decoration-[3px] transition-none"
+                  ? "underline decoration-gray-950 dark:decoration-gray-200  decoration-solid decoration-[3px] transition-none"
                   : "text-text dark:text-white"
               }`}
             >

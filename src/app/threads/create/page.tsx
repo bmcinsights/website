@@ -142,7 +142,7 @@ const ImageUpload = () => {
                   handleSubmit();
                 }}
                 disabled={!!(imageUrl && !uploadComplete)}
-                className="w-full bg-primary bg-opacity-100 hover:bg-sky-400 text-background py-3 rounded-xl"
+                className="w-full bg-primary bg-opacity-100 hover:bg-heading text-background py-3 rounded-xl"
               >
                 Create Thread
               </button>
