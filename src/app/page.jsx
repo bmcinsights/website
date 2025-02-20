@@ -11,7 +11,7 @@ const Page = () => {
           </h1>
           <p className="text-lg font-medium sm:text-xl md:text-xl text-text text-opacity-80 mb-8 leading-relaxed">
             The BMC Insights is a club under{" "}
-            <span className="bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text font-bold">
+            <span className="text-text font-bold">
               <a
                 href="https://www.thebritishcollege.edu.np/pages/the-british-model-college-lalitpur-campus"
                 target="_blank"
