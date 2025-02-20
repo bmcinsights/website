@@ -171,7 +171,7 @@ const Page = () => {
             </div>
             <div className="p-8 bg-gray-200 dark:bg-gray-900 text-text text-start">
               <a href="/blog/posts/bmcalevels">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+                <h2 className="text-2xl sm:text-3xl hover:text-primary font-bold mb-4">
                   A-Levels in Nepal: An Insider's Guide from a BMC Student
                 </h2>
               </a>
